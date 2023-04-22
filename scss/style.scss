@@ -4,16 +4,24 @@ $secondary-color: rgb(1, 22, 39);
 $color-grey: rgb(96 123 150);
 $border-color: #1e2d3d;
 $color-white: #e5e9f0;
+$color-code-identifier: #4d5bce;
+$color-code-variable-name: #43d9ad;
+$color-code-operator: #fff;
+$color-code-string: #e99287;
+
 // variables -end
 
 html {
   margin: 30px;
   body {
+    height: -webkit-fill-available;
     box-sizing: border-box;
     background-color: $primary-color;
     font-family: "Fira Code", monospace;
     // main section
     #main-section {
+      width: 100%;
+      height: calc(100vh - 60px);
       border-radius: 7px;
       border: 1px solid $border-color;
       background-color: $secondary-color;
@@ -33,6 +41,10 @@ html {
           a.nav-link-contact {
             border-right: none;
             border-left: 1px solid $border-color;
+            &:hover {
+              opacity: 1;
+              background-color: #1e2d3d74;
+            }
           }
           .active {
             color: #fff;
@@ -40,23 +52,31 @@ html {
           }
           a {
             height: 100%;
+            z-index: 99;
             display: flex;
             padding: 0 1.5rem;
             color: $color-grey;
             align-items: center;
             text-decoration: none;
             border-right: 1px solid $border-color;
+            &.nav-link:hover {
+              opacity: 1;
+              color: #fff;
+              background-color: #1e2d3d74;
+            }
           }
         }
       }
       // hello section
       section#_hello {
         width: 100%;
-        height: 100%;
-        display: flex;
+        height: calc(100% - 85px);
         flex: 1 1 auto;
         overflow: hidden;
         padding-left: 275px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         //blurry gradient effects
         .css-blurry-gradient-blue {
           right: 10%;
@@ -91,7 +111,7 @@ html {
         }
         .hero {
           .head {
-            padding-bottom: 3rem;
+            padding-bottom: 4rem;
             span,
             h1 {
               line-height: 1;
@@ -104,6 +124,86 @@ html {
               font-size: 58px;
               padding: 1rem 0;
             }
+            h2 {
+              font-size: 32px;
+              color: #4d5bce;
+            }
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            span {
+              color: #607b96;
+              font-size: 14px;
+              line-height: 1;
+              padding-bottom: 1rem;
+            }
+            span.hide {
+              display: none;
+            }
+            p {
+              font-size: 13px;
+              font-weight: 500;
+              span.identifier {
+                color: $color-code-identifier;
+              }
+              span.variable-name {
+                color: $color-code-variable-name;
+              }
+              span.operator {
+                color: $color-code-operator;
+              }
+              a.string {
+                text-underline-offset: 4px;
+                color: $color-code-string;
+              }
+            }
+          }
+        }
+      }
+      footer {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        border-top: 1px solid $border-color;
+        span.social-title {
+          font-size: 13px;
+          padding: 0 1.25rem;
+          color: $color-grey;
+          border-right: 1px solid #1e2d3d;
+        }
+        .social-icon {
+          font-size: 18px;
+          a {
+            opacity: 0.5;
+            width: 50px;
+            height: 100%;
+            color: $color-grey;
+            transition: all 0.1s;
+            display: inline-block;
+            border-right: 1px solid $border-color;
+            &:hover {
+              opacity: 1;
+              background-color: #1e2d3d74;
+            }
+          }
+        }
+        a.social-github {
+          height: 100%;
+          color: $color-grey;
+          text-decoration: none;
+          transition: all 0.1s;
+          display: inline-block;
+          padding: 0 0.8rem 0 1.25rem;
+          font-size: 13px;
+          border-left: 1px solid #1e2d3d;
+          &:hover {
+            opacity: 1;
+            background-color: #1e2d3d74;
+          }
+          i {
+            font-size: 18px;
           }
         }
       }

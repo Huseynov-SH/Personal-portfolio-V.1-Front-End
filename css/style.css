@@ -2,11 +2,14 @@ html {
   margin: 30px;
 }
 html body {
+  height: -webkit-fill-available;
   box-sizing: border-box;
   background-color: rgb(1, 12, 21);
   font-family: "Fira Code", monospace;
 }
 html body #main-section {
+  width: 100%;
+  height: calc(100vh - 60px);
   border-radius: 7px;
   border: 1px solid #1e2d3d;
   background-color: rgb(1, 22, 39);
@@ -27,12 +30,17 @@ html body #main-section header.main-navbar nav a.nav-link-contact {
   border-right: none;
   border-left: 1px solid #1e2d3d;
 }
+html body #main-section header.main-navbar nav a.nav-link-contact:hover {
+  opacity: 1;
+  background-color: rgba(30, 45, 61, 0.4549019608);
+}
 html body #main-section header.main-navbar nav .active {
   color: #fff;
   border-bottom: 2px solid #fea55f;
 }
 html body #main-section header.main-navbar nav a {
   height: 100%;
+  z-index: 99;
   display: flex;
   padding: 0 1.5rem;
   color: rgb(96, 123, 150);
@@ -40,13 +48,20 @@ html body #main-section header.main-navbar nav a {
   text-decoration: none;
   border-right: 1px solid #1e2d3d;
 }
+html body #main-section header.main-navbar nav a.nav-link:hover {
+  opacity: 1;
+  color: #fff;
+  background-color: rgba(30, 45, 61, 0.4549019608);
+}
 html body #main-section section#_hello {
   width: 100%;
-  height: 100%;
-  display: flex;
+  height: calc(100% - 85px);
   flex: 1 1 auto;
   overflow: hidden;
   padding-left: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 html body #main-section section#_hello .css-blurry-gradient-blue {
   right: 10%;
@@ -72,7 +87,7 @@ html body #main-section section#_hello .css-blurry-gradient-green {
   background: radial-gradient(circle at 50% 50%, #43d9ad, rgba(76, 0, 255, 0));
 }
 html body #main-section section#_hello .hero .head {
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 html body #main-section section#_hello .hero .head span,
 html body #main-section section#_hello .hero .head h1 {
@@ -85,4 +100,84 @@ html body #main-section section#_hello .hero .head span {
 html body #main-section section#_hello .hero .head h1 {
   font-size: 58px;
   padding: 1rem 0;
+}
+html body #main-section section#_hello .hero .head h2 {
+  font-size: 32px;
+  color: #4d5bce;
+}
+html body #main-section section#_hello .hero .info {
+  display: flex;
+  flex-direction: column;
+}
+html body #main-section section#_hello .hero .info span {
+  color: #607b96;
+  font-size: 14px;
+  line-height: 1;
+  padding-bottom: 1rem;
+}
+html body #main-section section#_hello .hero .info span.hide {
+  display: none;
+}
+html body #main-section section#_hello .hero .info p {
+  font-size: 13px;
+  font-weight: 500;
+}
+html body #main-section section#_hello .hero .info p span.identifier {
+  color: #4d5bce;
+}
+html body #main-section section#_hello .hero .info p span.variable-name {
+  color: #43d9ad;
+}
+html body #main-section section#_hello .hero .info p span.operator {
+  color: #fff;
+}
+html body #main-section section#_hello .hero .info p a.string {
+  text-underline-offset: 4px;
+  color: #e99287;
+}
+html body #main-section footer {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #1e2d3d;
+}
+html body #main-section footer span.social-title {
+  font-size: 13px;
+  padding: 0 1.25rem;
+  color: rgb(96, 123, 150);
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section footer .social-icon {
+  font-size: 18px;
+}
+html body #main-section footer .social-icon a {
+  opacity: 0.5;
+  width: 50px;
+  height: 100%;
+  color: rgb(96, 123, 150);
+  transition: all 0.1s;
+  display: inline-block;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section footer .social-icon a:hover {
+  opacity: 1;
+  background-color: rgba(30, 45, 61, 0.4549019608);
+}
+html body #main-section footer a.social-github {
+  height: 100%;
+  color: rgb(96, 123, 150);
+  text-decoration: none;
+  transition: all 0.1s;
+  display: inline-block;
+  padding: 0 0.8rem 0 1.25rem;
+  font-size: 13px;
+  border-left: 1px solid #1e2d3d;
+}
+html body #main-section footer a.social-github:hover {
+  opacity: 1;
+  background-color: rgba(30, 45, 61, 0.4549019608);
+}
+html body #main-section footer a.social-github i {
+  font-size: 18px;
 }
