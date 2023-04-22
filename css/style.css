@@ -14,6 +14,49 @@ html body #main-section {
   border: 1px solid #1e2d3d;
   background-color: rgb(1, 22, 39);
 }
+html body #main-section header.mobile-navbar {
+  display: none;
+}
+html body #main-section header.mobile-navbar nav {
+  height: 4rem;
+  position: relative;
+  line-height: 4rem;
+  color: rgb(1, 22, 39);
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section header.mobile-navbar nav input:checked + ul {
+  height: 80vh;
+}
+html body #main-section header.mobile-navbar nav a.nav-logo {
+  font-size: 17px;
+  padding: 0 20px;
+  color: rgb(96, 123, 150);
+  text-decoration: none;
+}
+html body #main-section header.mobile-navbar nav span.menu-bars {
+  font-size: 26px;
+  color: rgb(96, 123, 150);
+}
+html body #main-section header.mobile-navbar nav ul.menu {
+  z-index: 999;
+  overflow: hidden;
+  transition: linear 0.2s;
+  height: 0;
+  position: relative;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section header.mobile-navbar nav ul.menu li {
+  padding: 0 24px;
+  list-style: none;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section header.mobile-navbar nav ul.menu li a {
+  color: rgb(96, 123, 150);
+  text-decoration: none;
+}
+html body #main-section header.mobile-navbar nav ul.menu li a.active {
+  color: #fff;
+}
 html body #main-section header.main-navbar nav {
   width: 100%;
   height: 45px;
@@ -180,4 +223,74 @@ html body #main-section footer a.social-github:hover {
 }
 html body #main-section footer a.social-github i {
   font-size: 18px;
+}
+@media only screen and (max-width: 992px) {
+  html {
+    margin: 15px;
+  }
+  html body section#main-section header.main-navbar {
+    display: none;
+  }
+  html body section#main-section header.mobile-navbar {
+    display: block;
+  }
+  html body section#main-section section#_hello {
+    padding: 0;
+    height: calc(100vh - (6rem + 70px));
+  }
+  html body section#main-section section#_hello .css-blurry-gradient-blue {
+    filter: blur(70px);
+    height: 300px;
+    opacity: 0.5;
+    width: 300px;
+    z-index: 10;
+    right: 15%;
+    bottom: 20%;
+  }
+  html body section#main-section section#_hello .css-blurry-gradient-green {
+    filter: blur(70px);
+    height: 300px;
+    opacity: 0.5;
+    width: 300px;
+    z-index: 10;
+    top: 20%;
+    right: 28%;
+  }
+  html body section#main-section section#_hello .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1.75rem;
+  }
+  html body section#main-section section#_hello .hero .head {
+    padding-top: 4rem;
+  }
+  html body section#main-section section#_hello .hero .head span {
+    font-size: 18px;
+  }
+  html body section#main-section section#_hello .hero .head h1 {
+    font-size: 50px;
+  }
+  html body section#main-section section#_hello .hero .head h2 {
+    font-size: 20px;
+    color: #43d9ad;
+  }
+  html body section#main-section section#_hello .hero .info span.hide {
+    display: none;
+  }
+  html body section#main-section section#_hello .game {
+    display: none;
+  }
+  html body section#main-section footer > div {
+    justify-content: start !important;
+  }
+  html body section#main-section footer span.social-title {
+    padding-right: 70px;
+  }
+  html body section#main-section footer a.social-github {
+    padding: 0;
+  }
+  html body section#main-section footer a.social-github p.hide {
+    display: none !important;
+  }
 }

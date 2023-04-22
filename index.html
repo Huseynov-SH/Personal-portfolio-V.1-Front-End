@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <!-- Bootstrap 5.3 CSS -->
@@ -25,6 +25,29 @@
   <body>
     <!-- main section -start -->
     <section id="main-section">
+      <!-- mobile navbar -start -->
+      <header class="mobile-navbar">
+        <nav>
+          <div class="d-flex justify-content-between">
+            <div class="col-10">
+              <a class="nav-logo" href="">sadiq-huseynov</a>
+            </div>
+            <div class="col-2 text-center">
+              <span class="menu-bars">
+                <label for="menu-bars"><i class="fa-solid fa-bars"></i></label>
+              </span>
+            </div>
+          </div>
+          <input id="menu-bars" class="d-none" type="checkbox" />
+          <ul class="menu p-0 m-0">
+            <li><a class="active" href="">_hello</a></li>
+            <li><a class="" href="">_about-me</a></li>
+            <li><a class="" href="">_projects</a></li>
+            <li><a class="" href="">_contact-me</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- mobile navbar -end -->
       <!-- navbar -start -->
       <header class="main-navbar">
         <nav>
@@ -42,18 +65,20 @@
       <section id="_hello">
         <div class="css-blurry-gradient-blue"></div>
         <div class="css-blurry-gradient-green"></div>
-        <div class="row">
-          <div class="col-6">
+        <div class="d-flex">
+          <div class="col-12 col-sm-12 col-lg-6">
             <div class="hero">
               <div class="head">
                 <span> Hi all, I am </span>
-                <h1>Micheal Weaver</h1>
-                <h2>> Front-end developer</h2>
+                <h1>Sadiq Huseynov</h1>
+                <h2>> Full Stact developer</h2>
               </div>
               <div class="info">
-                <span class="action"> // complete the game to continue </span
-                ><span class=""> // you can also see it on my Github page </span
-                ><span class="hide"> // find my profile on Github: </span>
+                <span class="action hide">
+                  // complete the game to continue </span
+                ><span class="hide">
+                  // you can also see it on my Github page </span
+                ><span class=""> // find my profile on Github: </span>
                 <p class="code">
                   <span class="identifier"> const </span
                   ><span class="variable-name"> githubLink </span
@@ -65,7 +90,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-sm-12 col-lg-6 game">
             <div class="hero">
               <div class="head">
                 <span> Hi all, I am </span>
@@ -93,19 +118,21 @@
       <!-- footer -start -->
       <footer class="d-flex">
         <div class="w-100 h-100 d-flex justify-content-between">
-          <div class="d-flex">
+          <div class="d-flex w-100">
             <span class="social-title"> find me in: </span>
             <div class="social-icon">
               <a href=""><i class="fa-brands fa-twitter"></i> </a
               ><!-- 
                --><a href="">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-facebook-f"></i> </a
+              ><!-- 
+                
+               --><a class="social-github" href="#"
+                ><p class="hide d-inline-block">@username</p>
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
-          <a class="social-github" href="#"
-            >@username <i class="fa-brands fa-github"></i>
-          </a>
         </div>
       </footer>
       <!-- footer -end -->

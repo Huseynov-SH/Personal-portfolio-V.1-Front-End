@@ -25,6 +25,52 @@ html {
       border-radius: 7px;
       border: 1px solid $border-color;
       background-color: $secondary-color;
+      // mobile navbar
+      header.mobile-navbar {
+        display: none;
+        nav {
+          height: 4rem;
+          position: relative;
+          line-height: 4rem;
+          color: rgb(1, 22, 39);
+          border-bottom: 1px solid #1e2d3d;
+          input:checked {
+            & + ul {
+              height: 80vh;
+            }
+          }
+          a.nav-logo {
+            font-size: 17px;
+            padding: 0 20px;
+            color: $color-grey;
+            text-decoration: none;
+          }
+          span.menu-bars {
+            font-size: 26px;
+            color: $color-grey;
+          }
+          ul.menu {
+            z-index: 999;
+            overflow: hidden;
+            transition: linear 0.2s;
+            height: 0;
+            position: relative;
+            background-color: rgb(1, 22, 39);
+            li {
+              padding: 0 24px;
+              list-style: none;
+              border-bottom: 1px solid #1e2d3d;
+              a {
+                color: $color-grey;
+                text-decoration: none;
+                &.active {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
       // navbar
       header.main-navbar {
         nav {
@@ -204,6 +250,84 @@ html {
           }
           i {
             font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 992px) {
+    & {
+      margin: 15px;
+    }
+    body {
+      section#main-section {
+        header.main-navbar {
+          display: none;
+        }
+        header.mobile-navbar {
+          display: block;
+        }
+        section#_hello {
+          padding: 0;
+          height: calc(100vh - (6rem + 70px));
+          .css-blurry-gradient-blue {
+            filter: blur(70px);
+            height: 300px;
+            opacity: 0.5;
+            width: 300px;
+            z-index: 10;
+            right: 15%;
+            bottom: 20%;
+          }
+          .css-blurry-gradient-green {
+            filter: blur(70px);
+            height: 300px;
+            opacity: 0.5;
+            width: 300px;
+            z-index: 10;
+            top: 20%;
+            right: 28%;
+          }
+          .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 1.75rem;
+            .head {
+              padding-top: 4rem;
+              span {
+                font-size: 18px;
+              }
+              h1 {
+                font-size: 50px;
+              }
+              h2 {
+                font-size: 20px;
+                color: #43d9ad;
+              }
+            }
+            .info {
+              span.hide {
+                display: none;
+              }
+            }
+          }
+          .game {
+            display: none;
+          }
+        }
+        footer {
+          & > div {
+            justify-content: start !important;
+          }
+          span.social-title{
+            padding-right: 70px;
+          }
+          a.social-github {
+            padding: 0;
+            p.hide {
+              display: none !important;
+            }
           }
         }
       }
