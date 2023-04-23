@@ -25,7 +25,7 @@ html body #main-section header.mobile-navbar nav {
   border-bottom: 1px solid #1e2d3d;
 }
 html body #main-section header.mobile-navbar nav input:checked + ul {
-  height: 80vh;
+  height: 79vh;
 }
 html body #main-section header.mobile-navbar nav a.nav-logo {
   font-size: 17px;
@@ -185,16 +185,22 @@ html body #main-section footer {
   vertical-align: middle;
   border-top: 1px solid #1e2d3d;
 }
-html body #main-section footer span.social-title {
+html body #main-section footer .social-con {
+  justify-content: space-between;
+}
+html body #main-section footer .social-con span.social-title {
+  height: 100%;
   font-size: 13px;
+  display: inline-block;
+  line-height: 43px;
   padding: 0 1.25rem;
   color: rgb(96, 123, 150);
   border-right: 1px solid #1e2d3d;
 }
-html body #main-section footer .social-icon {
+html body #main-section footer .social-con .social-icon {
   font-size: 18px;
 }
-html body #main-section footer .social-icon a {
+html body #main-section footer .social-con .social-icon a {
   opacity: 0.5;
   width: 50px;
   height: 100%;
@@ -203,11 +209,11 @@ html body #main-section footer .social-icon a {
   display: inline-block;
   border-right: 1px solid #1e2d3d;
 }
-html body #main-section footer .social-icon a:hover {
+html body #main-section footer .social-con .social-icon a:hover {
   opacity: 1;
   background-color: rgba(30, 45, 61, 0.4549019608);
 }
-html body #main-section footer a.social-github {
+html body #main-section footer .social-con a.social-github {
   height: 100%;
   color: rgb(96, 123, 150);
   text-decoration: none;
@@ -217,16 +223,16 @@ html body #main-section footer a.social-github {
   font-size: 13px;
   border-left: 1px solid #1e2d3d;
 }
-html body #main-section footer a.social-github:hover {
+html body #main-section footer .social-con a.social-github:hover {
   opacity: 1;
   background-color: rgba(30, 45, 61, 0.4549019608);
 }
-html body #main-section footer a.social-github i {
+html body #main-section footer .social-con a.social-github i {
   font-size: 18px;
 }
 @media only screen and (max-width: 992px) {
   html {
-    margin: 15px;
+    margin: 10px;
   }
   html body section#main-section header.main-navbar {
     display: none;
@@ -269,7 +275,7 @@ html body #main-section footer a.social-github i {
     font-size: 18px;
   }
   html body section#main-section section#_hello .hero .head h1 {
-    font-size: 50px;
+    font-size: 55px;
   }
   html body section#main-section section#_hello .hero .head h2 {
     font-size: 20px;
@@ -284,13 +290,45 @@ html body #main-section footer a.social-github i {
   html body section#main-section footer > div {
     justify-content: start !important;
   }
-  html body section#main-section footer span.social-title {
+  html body section#main-section footer .social-con {
+    justify-content: left;
+  }
+  html body section#main-section footer .social-con span.social-title {
+    font-size: 14px;
     padding-right: 70px;
   }
-  html body section#main-section footer a.social-github {
+  html body section#main-section footer .social-con a.social-github {
     padding: 0;
+    opacity: 0.5;
+    width: 50px;
+    height: 100%;
+    color: rgb(96, 123, 150);
+    transition: all 0.1s;
+    display: inline-block;
+    border-right: 1px solid #1e2d3d;
   }
-  html body section#main-section footer a.social-github p.hide {
+  html body section#main-section footer .social-con a.social-github p.hide {
     display: none !important;
+  }
+}
+@media only screen and (max-width: 365px) {
+  html {
+    margin: 5px;
+  }
+  html body section#main-section section#_hello .hero .head span {
+    font-size: 13px;
+  }
+  html body section#main-section section#_hello .hero .head h1 {
+    font-size: 40px;
+  }
+  html body section#main-section section#_hello .hero .head h2 {
+    font-size: 15px;
+  }
+  html body section#main-section footer .social-con span.social-title {
+    font-size: 12px;
+    padding-right: 0px;
+  }
+  html body section#main-section footer .social-con a.social-github {
+    width: 30px;
   }
 }
