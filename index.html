@@ -19,6 +19,8 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <!-- Game snake CSS -->
+    <link rel="stylesheet" href="css/snake.css" />
     <!-- My main CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -74,11 +76,11 @@
                 <h2>> Full Stact developer</h2>
               </div>
               <div class="info">
-                <span class="action hide">
+                <span class="action info-hide">
                   // complete the game to continue </span
-                ><span class="hide">
+                ><span class="info-hide">
                   // you can also see it on my Github page </span
-                ><span class=""> // find my profile on Github: </span>
+                ><span class="info-show"> // find my profile on Github: </span>
                 <p class="code">
                   <span class="identifier"> const </span
                   ><span class="variable-name"> githubLink </span
@@ -91,24 +93,92 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-lg-6 game">
-            <div class="hero">
-              <div class="head">
-                <span> Hi all, I am </span>
-                <h1>Micheal Weaver</h1>
-                <h2>> Front-end developer</h2>
-              </div>
-              <div class="info">
-                <span class="action"> // complete the game to continue </span
-                ><span class=""> // you can also see it on my Github page </span
-                ><span class="hide"> // find my profile on Github: </span>
-                <p class="code">
-                  <span class="identifier"> const </span
-                  ><span class="variable-name"> githubLink </span
-                  ><span class="operator"> = </span
-                  ><a class="string" href="https://github.com/username">
-                    "https://github.com/username"
-                  </a>
-                </p>
+            <div class="game">
+              <div class="console">
+                <div class="corner-icons">
+                  <img
+                    class="absolute opacity-70 top-2 left-2"
+                    src="img/game-image/bolt-up-left.svg.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute opacity-70 top-2 right-2"
+                    src="img/game-image/bolt-up-right.svg.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute opacity-70 bottom-2 left-2"
+                    src="img/game-image/bolt-down-left.svg.svg"
+                    alt=""
+                  />
+                  <img
+                    class="absolute opacity-70 bottom-2 right-2"
+                    src="img/game-image/bolt-down-right.svg.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="d-flex w-100 h-100">
+                  <div class="col-6">
+                    <div class="game-screen">
+                      <div class="cus-container">
+                        <div class="wrapper">
+                          <div id="canvas"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="game-consloe">
+                      <div class="buttons">
+                        <p class="m-0">// use your keyboard</p>
+                        <p class="mb-4">// to play</p>
+                        <button id="console-button" class="button-up btn">
+                          <i class="fa-sharp fa-solid fa-caret-up"></i>
+                        </button>
+                        <div class="d-flex justify-content-center">
+                          <button id="console-button" class="button-left btn">
+                            <i class="fa-sharp fa-solid fa-caret-left"></i>
+                          </button>
+                          <button
+                            id="console-button"
+                            class="button-down btn mx-1"
+                          >
+                            <i class="fa-sharp fa-solid fa-caret-down"></i>
+                          </button>
+                          <button id="console-button" class="button-right btn">
+                            <i class="fa-sharp fa-solid fa-caret-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="score-board py-1">
+                        <div class="score-items py-2">
+                          <p class="m-0">// food left</p>
+                          <span class="score-item score-item-1"></span>
+                          <span class="score-item score-item-2"></span>
+                          <span class="score-item score-item-3"></span>
+                          <span class="score-item score-item-4"></span>
+                          <span class="score-item score-item-5"></span>
+                          <span class="score-item score-item-6"></span>
+                          <span class="score-item score-item-7"></span>
+                          <span class="score-item score-item-8"></span>
+                          <span class="score-item score-item-9"></span>
+                          <span class="score-item score-item-10"></span>
+                          <span class="score-item score-item-11"></span>
+                          <span class="score-item score-item-12"></span>
+                          <span class="score-item score-item-13"></span>
+                          <span class="score-item score-item-14"></span>
+                          <span class="score-item score-item-15"></span>
+                        </div>
+                        <h4 id="well-done">Well Done!</h4>
+                        <button id="replay">
+                          <i class="fas fa-play"></i>
+                          RESTART
+                        </button>
+                      </div>
+                      <a id="skpbtn" class="skip-but" href="">skip</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -151,5 +221,9 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <!-- Game snake js -->
+    <script src="js/snake.js"></script>
+    <!-- My main js -->
+    <script src="js/main.js"></script>
   </body>
 </html>

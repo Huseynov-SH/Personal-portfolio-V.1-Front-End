@@ -184,7 +184,7 @@ html {
               line-height: 1;
               padding-bottom: 1rem;
             }
-            span.hide {
+            span.info-show {
               display: none;
             }
             p {
@@ -202,6 +202,125 @@ html {
               a.string {
                 text-underline-offset: 4px;
                 color: $color-code-string;
+              }
+            }
+          }
+        }
+        .game {
+          .console {
+            height: 370px;
+            padding: 24px;
+            max-width: 420px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(
+              180deg,
+              #237b6d,
+              rgba(67, 217, 173, 0.13)
+            );
+            border: 1px solid #000;
+            justify-content: space-between;
+            .corner-icons {
+              img {
+                height: 20px;
+                width: 20px;
+                &.absolute {
+                  position: absolute;
+                }
+                &.opacity-70 {
+                  opacity: 0.7;
+                }
+                &.top-2 {
+                  top: 0.5rem;
+                }
+                &.left-2 {
+                  left: 0.5rem;
+                }
+                &.right-2 {
+                  right: 0.5rem;
+                }
+                &.bottom-2 {
+                  bottom: 0.5rem;
+                }
+              }
+            }
+            .game-screen {
+              height: 320px;
+              width: 192px;
+            }
+            .game-consloe {
+              height: 320px;
+              p {
+                text-align: left;
+                color: #fff;
+                font-size: 12px;
+              }
+              .buttons {
+                height: 134px;
+                width: 164px;
+                margin-left: auto;
+                margin-right: 0;
+                background-color: #01142330;
+                text-align: center;
+                border-radius: 7px;
+                padding: 10px;
+                font-size: 12px;
+                button {
+                  font-size: 12px;
+                  color: #fff;
+                  border-radius: 6px;
+                  line-height: 12px;
+                  height: 25px;
+                  width: 40px;
+                  align-items: center;
+                  background-color: #010c15;
+                  margin-bottom: 6px;
+                  &.button-up {
+                    margin: 0 auto 4px;
+                    display: block;
+                  }
+                  &:hover {
+                    background-color: #010c15d8;
+                    box-shadow: 0 0 10px #43d9ad;
+                  }
+                }
+              }
+              .score-board {
+                width: 164px;
+                margin-left: auto;
+                margin-right: 0;
+                padding-left: 1.25rem;
+                span.score-item {
+                  width: 6px;
+                  height: 6px;
+                  opacity: 0.3;
+                  margin-right: 15px;
+                  display: inline-block;
+                  background-color: #43d9ad;
+                  border-radius: 50%;
+                  box-shadow: 0 0 10px #43d9ad;
+                  &.active {
+                    opacity: 1;
+                  }
+                }
+              }
+              a.skip-but {
+                color: #fff;
+                position: absolute;
+                bottom: 24px;
+                right: 24px;
+                border: 2px solid #fff;
+                border-radius: 0.5rem;
+                font-size: 12px;
+                padding-block: 6px;
+                padding-inline: 12px;
+                text-decoration: none;
+                transition: all 0.2 linear;
+                &:hover {
+                  background-color: #fff3;
+                }
               }
             }
           }
@@ -313,8 +432,11 @@ html {
               }
             }
             .info {
-              span.hide {
+              span.info-hide {
                 display: none;
+              }
+              span.info-show {
+                display: block;
               }
             }
           }
