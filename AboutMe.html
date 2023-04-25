@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Game snake CSS -->
+    <link rel="stylesheet" href="css/snake.css" />
+    <!-- My main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- main section -start -->
+    <section id="main-section">
+      <!-- mobile navbar -start -->
+      <header class="mobile-navbar">
+        <nav>
+          <div class="d-flex justify-content-between">
+            <div class="col-10">
+              <a class="nav-logo" href="">sadiq-huseynov</a>
+            </div>
+            <div class="col-2 text-center">
+              <span class="menu-bars">
+                <label id="menu-bars-label" for="menu-bars"
+                  ><i class="fa-solid fa-bars"></i
+                ></label>
+              </span>
+            </div>
+          </div>
+          <input id="menu-bars" class="d-none" type="checkbox" />
+          <ul class="menu p-0 m-0">
+            <li><a class="" href="">_hello</a></li>
+            <li><a class="active" href="">_about-me</a></li>
+            <li><a class="" href="">_projects</a></li>
+            <li><a class="" href="">_contact-me</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- mobile navbar -end -->
+      <!-- navbar -start -->
+      <header class="main-navbar">
+        <nav>
+          <div class="d-flex">
+            <a id="nav-logo" href="">sadiq-huseynov</a>
+            <a class="nav-link" href="">_hello</a>
+            <a class="nav-link active" href="">_about-me</a>
+            <a class="nav-link" href="">_projects</a>
+          </div>
+          <a class="nav-link nav-link-contact" href="">_contact-me</a>
+        </nav>
+      </header>
+      <!-- navbar -end -->
+      <!-- about me section start -->
+      <section id="_about_me">
+        <div class="page-menu d-flex">
+          <div class="section">
+            <div class="section-icon">
+              <img
+                class="active"
+                src="img/about-me-image/info-professional.svg.svg"
+                alt=""
+              />
+            </div>
+            <div class="section-icon">
+              <img src="img/about-me-image/info-personal.svg.svg" alt="" />
+            </div>
+            <div class="section-icon">
+              <img src="img/about-me-image/info-hobbies.svg.svg" alt="" />
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="section-content-title">
+              <img src="img/about-me-image/arrow.svg.svg" alt="" />
+              <p>professional-info</p>
+            </div>
+            <div class="content">
+              <div class="con-container active my-2">
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder1.svg.svg"
+                  alt=""
+                />
+                <p>experience</p>
+              </div>
+              <div class="con-container my-2">
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder2.svg.svg"
+                  alt=""
+                />
+                <p>hard-skills</p>
+              </div>
+              <div class="con-container my-2">
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder3.svg.svg"
+                  alt=""
+                />
+                <p>soft-skills</p>
+              </div>
+            </div>
+            <div class="section-content-title contact">
+              <img src="img/about-me-image/arrow.svg.svg" alt="" />
+              <p>contacts</p>
+            </div>
+            <div class="content contact">
+              <div class="con-container active my-2 h-100">
+                <div class="d-flex mb-2">
+                  <img src="img/about-me-image/email.svg.svg" alt="" />
+                  <a href="mailto:user@gmail.com">user@gmail.com</a>
+                </div>
+                <div class="d-flex mb-2">
+                  <img src="img/about-me-image/phone.svg.svg" alt="" />
+                  <a href="tel:+90123456789">+3598246359</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="wrapper">
+            <div class="information">
+              <div class="sec-title">
+                <p>professional-info</p>
+              </div>
+              <div class="wrapper">
+                <div id="lineCount" class="line-numbers">
+                  <div class="cus-grid">
+                    <span class="counter">1</span>
+                    <span class="dec">/**</span>
+                  </div>
+                </div>
+                <div class="text-content">
+                  <p id="myText">
+                    <br />
+                    Over the past 5 years, Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et do lore magna aliqua. Ut enim ad
+                    minim veniam, qui past 5 years, Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et do lore magna aliqua. Ut enim ad
+                    minim veniam, quis no past 5 years, Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et do lore magna aliqua. Ut enim ad
+                    minim veniam, quis no past 5 years, Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et do lore magna aliqua. Ut enim ad
+                    minim veniam, quis nos nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                    dolor in reprehenderit in voluptate velit esse cillum dolore
+                    eu fugiat nulla pariatur.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="code-snippet-showcase">
+              <div class="sec-title"></div>
+              <div class="wrapper">
+                <h4>// Code snippet showcase:</h4>
+                <div class="snippet-card">
+                  <div class="snippet-title">
+                    <div class="d-flex left">
+                      <img src="img/about-me-image/85245377.jpg" alt="" />
+                      <div class="">
+                        <a href=""> @alexdeploy</a>
+                        <p>Created 2 months ago</p>
+                      </div>
+                    </div>
+                    <div class="d-flex right">
+                      <div>
+                        <img src="img/about-me-image/comments.svg.svg" alt="" />
+                        <span>details</span>
+                      </div>
+                      <div>
+                        <img src="img/about-me-image/star.svg.svg" alt="" />
+                        <span>stars</span>
+                      </div>
+                    </div>
+                  </div>
+                  <pre><code>function initializeModelChunk<>(chunk: ResolvedModelChunk): T {
+     const value: T = parseModel(chunk._response, chunk._value);
+     const initializedChunk: InitializedChunk<> = (chunk: any);
+     initializedChunk._status = INITIALIZED;
+     initializedChunk._value = value;
+     return value;
+   }
+                  </code></pre>
+                  <p class="hide-p">
+                    My work here was 5 months ago. It was for the project called
+                    “...”. Some other text can be placed here.
+                  </p>
+                </div>
+                <div class="snippet-card">
+                  <div class="snippet-title">
+                    <div class="d-flex left">
+                      <img src="img/about-me-image/85245377.jpg" alt="" />
+                      <div class="">
+                        <a href=""> @alexdeploy</a>
+                        <p>Created 2 months ago</p>
+                      </div>
+                    </div>
+                    <div class="d-flex right">
+                      <div>
+                        <img src="img/about-me-image/comments.svg.svg" alt="" />
+                        <span>details</span>
+                      </div>
+                      <div>
+                        <img src="img/about-me-image/star.svg.svg" alt="" />
+                        <span>stars</span>
+                      </div>
+                    </div>
+                  </div>
+                  <pre><code>function initializeModelChunk<>(chunk: ResolvedModelChunk): T {
+     const value: T = parseModel(chunk._response, chunk._value);
+     const initializedChunk: InitializedChunk<> = (chunk: any);
+     initializedChunk._status = INITIALIZED;
+     initializedChunk._value = value;
+     return value;
+  }
+                    </code></pre>
+                  <p class="hide-p">
+                    My work here was 5 months ago. It was for the project called
+                    “...”. Some other text can be placed here.
+                  </p>
+                </div>
+                <div class="snippet-card">
+                  <div class="snippet-title">
+                    <div class="d-flex left">
+                      <img src="img/about-me-image/85245377.jpg" alt="" />
+                      <div class="">
+                        <a href=""> @alexdeploy</a>
+                        <p>Created 2 months ago</p>
+                      </div>
+                    </div>
+                    <div class="d-flex right">
+                      <div>
+                        <img src="img/about-me-image/comments.svg.svg" alt="" />
+                        <span>details</span>
+                      </div>
+                      <div>
+                        <img src="img/about-me-image/star.svg.svg" alt="" />
+                        <span>stars</span>
+                      </div>
+                    </div>
+                  </div>
+                  <pre><code>function initializeModelChunk<>(chunk: ResolvedModelChunk): T {
+     const value: T = parseModel(chunk._response, chunk._value);
+     const initializedChunk: InitializedChunk<> = (chunk: any);
+     initializedChunk._status = INITIALIZED;
+     initializedChunk._value = value;
+     return value;
+  }
+                    </code></pre>
+                  <p class="hide-p">
+                    My work here was 5 months ago. It was for the project called
+                    “...”. Some other text can be placed here.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- about me section end -->
+      <!-- footer -start -->
+      <footer class="d-flex">
+        <div class="w-100 h-100 d-flex justify-content-between">
+          <div class="d-flex w-100 social-con">
+            <div class="social-icon">
+              <span class="social-title"> find me in: </span
+              ><!-- 
+
+               --><a href=""><i class="fa-brands fa-twitter"></i> </a
+              ><!-- 
+               --><a href=""> <i class="fa-brands fa-facebook-f"></i> </a
+              ><!-- 
+                
+               -->
+            </div>
+            <a class="social-github" href="#"
+              ><p class="hide d-inline-block m-0 p-0">@username</p>
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- footer -end -->
+    </section>
+    <!-- main section -end -->
+    <!-- Font Awesome  6.4.0-->
+    <script
+      src="https://kit.fontawesome.com/c658681ccb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstarp 5.3 JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My main js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -37,6 +37,12 @@ html body #main-section header.mobile-navbar nav span.menu-bars {
   font-size: 26px;
   color: rgb(96, 123, 150);
 }
+html body #main-section header.mobile-navbar nav span.menu-bars label {
+  transition: all 0.2s linear;
+}
+html body #main-section header.mobile-navbar nav span.menu-bars label.active {
+  transform: rotate(90deg);
+}
 html body #main-section header.mobile-navbar nav ul.menu {
   z-index: 999;
   overflow: hidden;
@@ -75,7 +81,7 @@ html body #main-section header.main-navbar nav a.nav-link-contact {
 }
 html body #main-section header.main-navbar nav a.nav-link-contact:hover {
   opacity: 1;
-  background-color: rgba(30, 45, 61, 0.4549019608);
+  background-color: #1e2d3d;
 }
 html body #main-section header.main-navbar nav .active {
   color: #fff;
@@ -94,7 +100,7 @@ html body #main-section header.main-navbar nav a {
 html body #main-section header.main-navbar nav a.nav-link:hover {
   opacity: 1;
   color: #fff;
-  background-color: rgba(30, 45, 61, 0.4549019608);
+  background-color: #1e2d3d;
 }
 html body #main-section section#_hello {
   width: 100%;
@@ -287,7 +293,282 @@ html body #main-section section#_hello .game .console .game-consloe a.skip-but {
   transition: all 0.2 linear;
 }
 html body #main-section section#_hello .game .console .game-consloe a.skip-but:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #fff;
+}
+html body #main-section section#_about_me {
+  display: flex;
+  height: calc(100% - 85px);
+}
+html body #main-section section#_about_me .page-menu {
+  height: 100%;
+  max-width: 275px !important;
+  min-width: 275px !important;
+}
+html body #main-section section#_about_me .page-menu .section {
+  width: 62px;
+  height: 100%;
+  padding: 24px 0;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-menu .section div.section-icon {
+  color: #607b96;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+  transition: all 0.2s linear;
+  font-size: 20px;
+}
+html body #main-section section#_about_me .page-menu .section div.section-icon img {
+  opacity: 0.4;
+  cursor: pointer;
+}
+html body #main-section section#_about_me .page-menu .section div.section-icon img:hover {
+  opacity: 1;
+}
+html body #main-section section#_about_me .page-menu .section div.section-icon img.active {
+  opacity: 1;
+}
+html body #main-section section#_about_me .page-menu .section-content {
+  width: 213px;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-menu .section-content .section-content-title {
+  height: 35px;
+  display: flex;
+  width: 100%;
+  padding-left: 2px;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-menu .section-content .section-content-title img {
+  width: 7px;
+  margin: auto 10px;
+  transform: rotate(90deg);
+  transition: all 0.2s linear;
+}
+html body #main-section section#_about_me .page-menu .section-content .section-content-title p {
+  line-height: 34px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+}
+html body #main-section section#_about_me .page-menu .section-content .section-content-title.contact {
+  border-top: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-menu .section-content .content .con-container {
+  height: 21px;
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+html body #main-section section#_about_me .page-menu .section-content .content .con-container img.diple {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  width: 0.5rem;
+}
+html body #main-section section#_about_me .page-menu .section-content .content .con-container img.folder {
+  margin-right: 0.75rem;
+  height: auto;
+  max-width: 100%;
+  width: 16px;
+}
+html body #main-section section#_about_me .page-menu .section-content .content .con-container p {
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_about_me .page-menu .section-content .content .con-container.active p {
+  color: #fff;
+}
+html body #main-section section#_about_me .page-menu .section-content .content .con-container.active img.diple {
+  transform: rotate(90deg);
+}
+html body #main-section section#_about_me .page-menu .section-content .content.contact img {
+  width: 17px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+html body #main-section section#_about_me .page-menu .section-content .content.contact a {
+  color: rgb(96, 123, 150);
+  text-decoration: none;
+  font-size: 14px;
+}
+html body #main-section section#_about_me .page-menu .section-content .content.contact a:hover {
+  color: #fff;
+}
+html body #main-section section#_about_me .page-menu .section-content .content.contact .con-container {
+  display: flex;
+  flex-direction: column;
+}
+html body #main-section section#_about_me .page-content {
+  width: 100%;
+}
+html body #main-section section#_about_me .page-content .wrapper {
+  width: 100%;
+  display: flex;
+}
+html body #main-section section#_about_me .page-content .wrapper .information {
+  width: 50%;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .sec-title {
+  max-height: 35px;
+  min-height: 35px;
+  border-right: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .sec-title p {
+  margin: 0;
+  width: max-content;
+  padding: 7px 12px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(96, 123, 150);
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper {
+  overflow: auto;
+  height: calc(100vh - 205px);
+  padding: 1.25rem;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper::-webkit-scrollbar {
+  width: 12px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .line-numbers {
+  width: 100px;
+  text-align: right;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .line-numbers .cus-grid {
+  display: flex;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .line-numbers .cus-grid span {
+  color: rgb(96, 123, 150);
+  font-size: 14px;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .line-numbers .cus-grid span.counter {
+  width: 50%;
+  padding-right: 12.5px;
+  display: inline-block;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .line-numbers .cus-grid span.dec {
+  width: 50%;
+  padding-right: 1px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .text-content {
+  width: 78%;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .text-content p {
+  font-size: 14px;
+  color: rgb(96, 123, 150);
+  word-wrap: break-word;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase {
+  width: 50%;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .sec-title {
+  max-height: 35px;
+  min-height: 35px;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: calc(100vh - 205px);
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper::-webkit-scrollbar {
+  width: 12px;
+  border: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper h4 {
+  display: block;
+  color: rgb(96, 123, 150);
+  font-size: 0.885rem;
+  line-height: 1.25rem;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title .left img {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 5px;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title .left a {
+  color: #4d5bce;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title .left p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title .right img {
+  width: 1rem;
+  height: 1rem;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title .right span {
+  font-size: 12px;
+  color: rgb(96, 123, 150);
+  margin-right: 1rem;
+  cursor: pointer;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card .snippet-title .right span:hover {
+  color: #fff;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card pre {
+  background-color: #011221;
+  border: 1px solid #1e2d3d;
+  border-radius: 15px;
+  font-size: 12px;
+  max-height: 220px;
+  padding: 30px 15px;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card pre::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: none;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card pre code {
+  color: rgb(96, 123, 150);
+  max-height: 220px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  width: max-content;
+}
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card p.hide-p {
+  margin: 0;
+  color: rgb(96, 123, 150);
+  font-size: 14px;
+  padding: 20px 5px 5px 5px;
+  border-top: 1px solid #1e2d3d;
+  display: none;
 }
 html body #main-section footer {
   height: 40px;
@@ -322,7 +603,7 @@ html body #main-section footer .social-con .social-icon a {
 }
 html body #main-section footer .social-con .social-icon a:hover {
   opacity: 1;
-  background-color: rgba(30, 45, 61, 0.4549019608);
+  background-color: #1e2d3d;
 }
 html body #main-section footer .social-con a.social-github {
   height: 100%;
@@ -336,7 +617,7 @@ html body #main-section footer .social-con a.social-github {
 }
 html body #main-section footer .social-con a.social-github:hover {
   opacity: 1;
-  background-color: rgba(30, 45, 61, 0.4549019608);
+  background-color: #1e2d3d;
 }
 html body #main-section footer .social-con a.social-github i {
   font-size: 18px;

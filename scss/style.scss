@@ -33,7 +33,7 @@ html {
           position: relative;
           line-height: 4rem;
           color: rgb(1, 22, 39);
-          border-bottom: 1px solid #1e2d3d;
+          border-bottom: 1px solid $border-color;
           input:checked {
             & + ul {
               height: 79vh;
@@ -48,6 +48,12 @@ html {
           span.menu-bars {
             font-size: 26px;
             color: $color-grey;
+            label {
+              transition: all 0.2s linear;
+              &.active {
+                transform: rotate(90deg);
+              }
+            }
           }
           ul.menu {
             z-index: 999;
@@ -59,12 +65,12 @@ html {
             li {
               padding: 0 24px;
               list-style: none;
-              border-bottom: 1px solid #1e2d3d;
+              border-bottom: 1px solid $border-color;
               a {
                 color: $color-grey;
                 text-decoration: none;
                 &.active {
-                  color: #fff;
+                  color: $color-code-operator;
                 }
               }
             }
@@ -79,7 +85,7 @@ html {
           display: flex;
           font-size: 13px;
           justify-content: space-between;
-          border-bottom: 1px solid #1e2d3d;
+          border-bottom: 1px solid $border-color;
           a#nav-logo {
             max-width: 275px !important;
             min-width: 275px !important;
@@ -89,11 +95,11 @@ html {
             border-left: 1px solid $border-color;
             &:hover {
               opacity: 1;
-              background-color: #1e2d3d74;
+              background-color: $border-color;
             }
           }
           .active {
-            color: #fff;
+            color: $color-code-operator;
             border-bottom: 2px solid #fea55f;
           }
           a {
@@ -107,8 +113,8 @@ html {
             border-right: 1px solid $border-color;
             &.nav-link:hover {
               opacity: 1;
-              color: #fff;
-              background-color: #1e2d3d74;
+              color: $color-code-operator;
+              background-color: $border-color;
             }
           }
         }
@@ -254,7 +260,7 @@ html {
               height: 320px;
               p {
                 text-align: left;
-                color: #fff;
+                color: $color-code-operator;
                 font-size: 12px;
               }
               .buttons {
@@ -269,7 +275,7 @@ html {
                 font-size: 12px;
                 button {
                   font-size: 12px;
-                  color: #fff;
+                  color: $color-code-operator;
                   border-radius: 6px;
                   line-height: 12px;
                   height: 25px;
@@ -307,11 +313,11 @@ html {
                 }
               }
               a.skip-but {
-                color: #fff;
+                color: $color-code-operator;
                 position: absolute;
                 bottom: 24px;
                 right: 24px;
-                border: 2px solid #fff;
+                border: 2px solid $color-code-operator;
                 border-radius: 0.5rem;
                 font-size: 12px;
                 padding-block: 6px;
@@ -319,7 +325,295 @@ html {
                 text-decoration: none;
                 transition: all 0.2 linear;
                 &:hover {
-                  background-color: #fff3;
+                  background-color: $color-code-operator;
+                }
+              }
+            }
+          }
+        }
+      }
+      //about me section
+      section#_about_me {
+        display: flex;
+        height: calc(100% - 85px);
+        .page-menu {
+          height: 100%;
+          max-width: 275px !important;
+          min-width: 275px !important;
+          .section {
+            width: 62px;
+            height: 100%;
+            padding: 24px 0;
+            border-right: 1px solid $border-color;
+            div.section-icon {
+              color: #607b96;
+              display: flex;
+              justify-content: center;
+              padding-bottom: 24px;
+              transition: all 0.2s linear;
+              font-size: 20px;
+              img {
+                opacity: 0.4;
+                cursor: pointer;
+                &:hover {
+                  opacity: 1;
+                }
+                &.active {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          .section-content {
+            width: 213px;
+            border-right: 1px solid $border-color;
+            .section-content-title {
+              height: 35px;
+              display: flex;
+              width: 100%;
+              padding-left: 2px;
+              border-bottom: 1px solid $border-color;
+              img {
+                width: 7px;
+                margin: auto 10px;
+                transform: rotate(90deg);
+                transition: all 0.2s linear;
+              }
+              p {
+                line-height: 34px;
+                margin: 0;
+                color: $color-code-operator;
+                font-size: 14px;
+              }
+              &.contact {
+                border-top: 1px solid #1e2d3d;
+              }
+            }
+            .content {
+              .con-container {
+                height: 21px;
+                display: flex;
+                cursor: pointer;
+                justify-content: flex-start;
+                img {
+                  &.diple {
+                    margin-left: 0.75rem;
+                    margin-right: 0.75rem;
+                    max-width: -moz-fit-content;
+                    max-width: fit-content;
+                    width: 0.5rem;
+                  }
+                  &.folder {
+                    margin-right: 0.75rem;
+                    height: auto;
+                    max-width: 100%;
+                    width: 16px;
+                  }
+                }
+                p {
+                  font-size: 14px;
+                  color: $color-code-operator;
+                  display: inline-block;
+                  color: $color-grey;
+                }
+                &.active p {
+                  color: $color-code-operator;
+                }
+                &.active img.diple {
+                  transform: rotate(90deg);
+                }
+              }
+              &.contact {
+                img {
+                  width: 17px;
+                  margin-left: 1rem;
+                  margin-right: 1rem;
+                }
+                a {
+                  color: $color-grey;
+                  text-decoration: none;
+                  font-size: 14px;
+                  &:hover {
+                    color: $color-code-operator;
+                  }
+                }
+                .con-container {
+                  display: flex;
+                  flex-direction: column;
+                }
+              }
+            }
+          }
+        }
+        .page-content {
+          width: 100%;
+          .wrapper {
+            width: 100%;
+            display: flex;
+            .information {
+              width: 50%;
+              .sec-title {
+                max-height: 35px;
+                min-height: 35px;
+                border-right: 1px solid $border-color;
+                p {
+                  margin: 0;
+                  width: max-content;
+                  padding: 7px 12px;
+                  font-size: 0.875rem;
+                  line-height: 1.25rem;
+                  color: $color-grey;
+                  border-right: 1px solid $border-color;
+                }
+                border-bottom: 1px solid $border-color;
+              }
+              .wrapper {
+                overflow: auto;
+                height: calc(100vh - 205px);
+                padding: 1.25rem;
+                border-right: 1px solid $border-color;
+                &::-webkit-scrollbar {
+                  width: 12px;
+                  border-left: 1px solid $border-color;
+                  border-bottom: 1px solid $border-color;
+                  background-color: $secondary-color;
+                }
+                &::-webkit-scrollbar-thumb {
+                  height: 30px;
+                  background-color: $color-grey;
+                }
+                .line-numbers {
+                  width: 100px;
+                  text-align: right;
+                  .cus-grid {
+                    display: flex;
+                    span {
+                      color: $color-grey;
+                      font-size: 14px;
+                      &.counter {
+                        width: 50%;
+                        padding-right: 12.5px;
+                        display: inline-block;
+                      }
+                      &.dec {
+                        width: 50%;
+                        padding-right: 1px;
+                        text-align: center;
+                        display: inline-block;
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                }
+                .text-content {
+                  width: 78%;
+                  p {
+                    font-size: 14px;
+                    color: $color-grey;
+                    word-wrap: break-word;
+                  }
+                }
+              }
+            }
+            .code-snippet-showcase {
+              width: 50%;
+              .sec-title {
+                max-height: 35px;
+                min-height: 35px;
+                border-bottom: 1px solid $border-color;
+              }
+              .wrapper {
+                padding: 1rem 1.5rem;
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+                height: calc(100vh - 205px);
+                &::-webkit-scrollbar {
+                  width: 12px;
+                  border: 1px solid $border-color;
+                  background-color: $secondary-color;
+                }
+                &::-webkit-scrollbar-thumb {
+                  height: 30px;
+                  background-color: $color-grey;
+                }
+                h4 {
+                  display: block;
+                  color: $color-grey;
+                  font-size: 0.885rem;
+                  line-height: 1.25rem;
+                }
+                .snippet-card {
+                  .snippet-title {
+                    margin: 0.5rem 0;
+                    display: flex;
+                    justify-content: space-between;
+                    .left {
+                      img {
+                        width: 2rem;
+                        height: 2rem;
+                        margin-top: 5px;
+                        border-radius: 100%;
+                        margin-right: 0.5rem;
+                      }
+                      a {
+                        color: #4d5bce;
+                        font-size: 0.75rem;
+                        line-height: 1rem;
+                        text-decoration: none;
+                        font-weight: bold;
+                      }
+                      p {
+                        margin: 0;
+                        font-size: 0.75rem;
+                        line-height: 1rem;
+                        color: $color-grey;
+                      }
+                    }
+                    .right {
+                      img {
+                        width: 1rem;
+                        height: 1rem;
+                      }
+                      span {
+                        font-size: 12px;
+                        color: $color-grey;
+                        margin-right: 1rem;
+                        cursor: pointer;
+                        &:hover {
+                          color: $color-code-operator;
+                        }
+                      }
+                    }
+                  }
+                  pre {
+                    background-color: #011221;
+                    border: 1px solid #1e2d3d;
+                    border-radius: 15px;
+                    font-size: 12px;
+                    max-height: 220px;
+                    padding: 30px 15px;
+                    &::-webkit-scrollbar {
+                      width: 5px;
+                      height: 5px;
+                      display: none;
+                    }
+                    code {
+                      color: $color-grey;
+                      max-height: 220px;
+                      overflow: hidden;
+                      white-space: pre-wrap;
+                      width: max-content;
+                    }
+                  }
+                  p.hide-p {
+                    margin: 0;
+                    color: $color-grey;
+                    font-size: 14px;
+                    padding: 20px 5px 5px 5px;
+                    border-top: 1px solid $border-color;
+                    display: none;
+                  }
                 }
               }
             }
@@ -341,7 +635,7 @@ html {
             line-height: 43px;
             padding: 0 1.25rem;
             color: $color-grey;
-            border-right: 1px solid #1e2d3d;
+            border-right: 1px solid $border-color;
           }
           .social-icon {
             font-size: 18px;
@@ -355,7 +649,7 @@ html {
               border-right: 1px solid $border-color;
               &:hover {
                 opacity: 1;
-                background-color: #1e2d3d74;
+                background-color: $border-color;
               }
             }
           }
@@ -367,10 +661,10 @@ html {
             display: inline-block;
             padding: 0 0.8rem 0 1.25rem;
             font-size: 13px;
-            border-left: 1px solid #1e2d3d;
+            border-left: 1px solid $border-color;
             &:hover {
               opacity: 1;
-              background-color: #1e2d3d74;
+              background-color: $border-color;
             }
             i {
               font-size: 18px;
@@ -462,7 +756,7 @@ html {
               color: rgb(96, 123, 150);
               transition: all 0.1s;
               display: inline-block;
-              border-right: 1px solid #1e2d3d;
+              border-right: 1px solid $border-color;
               p.hide {
                 display: none !important;
               }
