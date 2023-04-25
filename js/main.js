@@ -5,44 +5,49 @@ bars_label_icon.addEventListener("click", function () {
   this.classList.toggle("active");
 });
 
-function createLineDiv(lineNumber) {
-  var lineDiv = document.createElement("div");
-  lineDiv.classList.add("cus-grid");
+// // About Me  Information Tabs
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementsByClassName("tablinks")[0].click();
+});
 
-  var counterSpan = document.createElement("span");
-  counterSpan.classList.add("counter");
-  counterSpan.textContent = lineNumber - 1;
-  lineDiv.appendChild(counterSpan);
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementsByClassName("subtablinks")[0].click();
+});
 
-  var decSpan = document.createElement("span");
-  decSpan.classList.add("dec");
-  decSpan.textContent = "*";
-  lineDiv.appendChild(decSpan);
-
-  return lineDiv;
+function openTab(evt, tabName) {
+  if (tabName == "Tab1") {
+    document.getElementById("sec-title-p1").innerText = "professional-info";
+    document.getElementById("sec-title-p2").innerText = "professional-info";
+  } else if (tabName == "Tab2") {
+    document.getElementById("sec-title-p1").innerText = "personal-info";
+    document.getElementById("sec-title-p2").innerText = "personal-info";
+  } else {
+    document.getElementById("sec-title-p1").innerText = "hobbies-info";
+    document.getElementById("sec-title-p2").innerText = "hobbies-info";
+  }
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }
 
-var text = document.getElementById("myText").textContent;
-var lines = text.split("\n");
-
-for (var i = 0; i < lines.length; i++) {
-  if (lines[i].trim() !== "") {
-    var lineDiv = createLineDiv(i + 1);
-    document.getElementById("lineCount").appendChild(lineDiv);
+function openSubtab(evt, subtabName) {
+  var i, subtabcontent, subtablinks;
+  subtabcontent = document.getElementsByClassName("subtabcontent");
+  for (i = 0; i < subtabcontent.length; i++) {
+    subtabcontent[i].style.display = "none";
   }
-  if (i == lines.length - 1) {
-    var lineDiv2 = document.createElement("div");
-    lineDiv2.classList.add("cus-grid");
-
-    var counterSpan2 = document.createElement("span");
-    counterSpan2.classList.add("counter");
-    counterSpan2.textContent = i;
-    lineDiv2.appendChild(counterSpan2);
-
-    var decSpan2 = document.createElement("span");
-    decSpan2.classList.add("dec");
-    decSpan2.textContent = "**/";
-    lineDiv2.appendChild(decSpan2);
-    document.getElementById("lineCount").appendChild(lineDiv2);
+  subtablinks = document.getElementsByClassName("subtablinks");
+  for (i = 0; i < subtablinks.length; i++) {
+    subtablinks[i].className = subtablinks[i].className.replace(" active", "");
   }
+  document.getElementById(subtabName).style.display = "block";
+  evt.currentTarget.className += " active";
 }

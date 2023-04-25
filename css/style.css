@@ -354,6 +354,9 @@ html body #main-section section#_about_me .page-menu .section-content .section-c
 html body #main-section section#_about_me .page-menu .section-content .section-content-title.contact {
   border-top: 1px solid #1e2d3d;
 }
+html body #main-section section#_about_me .page-menu .section-content .content {
+  display: none;
+}
 html body #main-section section#_about_me .page-menu .section-content .content .con-container {
   height: 21px;
   display: flex;
@@ -428,20 +431,10 @@ html body #main-section section#_about_me .page-content .wrapper .information .s
   border-right: 1px solid #1e2d3d;
 }
 html body #main-section section#_about_me .page-content .wrapper .information .wrapper {
-  overflow: auto;
+  overflow: hidden;
   height: calc(100vh - 205px);
   padding: 1.25rem;
   border-right: 1px solid #1e2d3d;
-}
-html body #main-section section#_about_me .page-content .wrapper .information .wrapper::-webkit-scrollbar {
-  width: 12px;
-  border-left: 1px solid #1e2d3d;
-  border-bottom: 1px solid #1e2d3d;
-  background-color: rgb(1, 22, 39);
-}
-html body #main-section section#_about_me .page-content .wrapper .information .wrapper::-webkit-scrollbar-thumb {
-  height: 30px;
-  background-color: rgb(96, 123, 150);
 }
 html body #main-section section#_about_me .page-content .wrapper .information .wrapper .line-numbers {
   width: 100px;
@@ -467,7 +460,19 @@ html body #main-section section#_about_me .page-content .wrapper .information .w
   font-size: 14px;
 }
 html body #main-section section#_about_me .page-content .wrapper .information .wrapper .text-content {
+  overflow: auto;
+  display: none;
   width: 78%;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .text-content::-webkit-scrollbar {
+  width: 12px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_about_me .page-content .wrapper .information .wrapper .text-content::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: rgb(96, 123, 150);
 }
 html body #main-section section#_about_me .page-content .wrapper .information .wrapper .text-content p {
   font-size: 14px;

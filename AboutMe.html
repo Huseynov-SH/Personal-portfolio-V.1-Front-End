@@ -44,7 +44,7 @@
           </div>
           <input id="menu-bars" class="d-none" type="checkbox" />
           <ul class="menu p-0 m-0">
-            <li><a class="" href="">_hello</a></li>
+            <li><a class="" href="index.html">_hello</a></li>
             <li><a class="active" href="">_about-me</a></li>
             <li><a class="" href="">_projects</a></li>
             <li><a class="" href="">_contact-me</a></li>
@@ -57,7 +57,7 @@
         <nav>
           <div class="d-flex">
             <a id="nav-logo" href="">sadiq-huseynov</a>
-            <a class="nav-link" href="">_hello</a>
+            <a class="nav-link" href="index.html">_hello</a>
             <a class="nav-link active" href="">_about-me</a>
             <a class="nav-link" href="">_projects</a>
           </div>
@@ -69,27 +69,43 @@
       <section id="_about_me">
         <div class="page-menu d-flex">
           <div class="section">
+            <!-- Tab Links -->
             <div class="section-icon">
               <img
-                class="active"
+                class="tablinks"
                 src="img/about-me-image/info-professional.svg.svg"
                 alt=""
+                onclick="openTab(event, 'Tab1')"
               />
             </div>
             <div class="section-icon">
-              <img src="img/about-me-image/info-personal.svg.svg" alt="" />
+              <img
+                class="tablinks"
+                src="img/about-me-image/info-personal.svg.svg"
+                alt=""
+                onclick="openTab(event, 'Tab2')"
+              />
             </div>
             <div class="section-icon">
-              <img src="img/about-me-image/info-hobbies.svg.svg" alt="" />
+              <img
+                class="tablinks"
+                src="img/about-me-image/info-hobbies.svg.svg"
+                alt=""
+                onclick="openTab(event, 'Tab3')"
+              />
             </div>
           </div>
           <div class="section-content">
             <div class="section-content-title">
               <img src="img/about-me-image/arrow.svg.svg" alt="" />
-              <p>professional-info</p>
+              <p id="sec-title-p1">professional-info</p>
             </div>
-            <div class="content">
-              <div class="con-container active my-2">
+            <!--Tab content and Sup Tab Links -->
+            <div id="Tab1" class="content tabcontent">
+              <div
+                class="con-container active my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab1')"
+              >
                 <img
                   class="diple"
                   src="img/about-me-image/diple.svg.svg"
@@ -102,7 +118,10 @@
                 />
                 <p>experience</p>
               </div>
-              <div class="con-container my-2">
+              <div
+                class="con-container my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab2')"
+              >
                 <img
                   class="diple"
                   src="img/about-me-image/diple.svg.svg"
@@ -115,7 +134,10 @@
                 />
                 <p>hard-skills</p>
               </div>
-              <div class="con-container my-2">
+              <div
+                class="con-container my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab3')"
+              >
                 <img
                   class="diple"
                   src="img/about-me-image/diple.svg.svg"
@@ -129,11 +151,95 @@
                 <p>soft-skills</p>
               </div>
             </div>
+            <div id="Tab2" class="content tabcontent">
+              <div
+                class="con-container active my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab4')"
+              >
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder1.svg.svg"
+                  alt=""
+                />
+                <p>bio</p>
+              </div>
+              <div
+                class="con-container my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab5')"
+              >
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder2.svg.svg"
+                  alt=""
+                />
+                <p>interests</p>
+              </div>
+              <div
+                class="con-container my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab6')"
+              >
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder3.svg.svg"
+                  alt=""
+                />
+                <p>education</p>
+              </div>
+            </div>
+            <div id="Tab3" class="content tabcontent">
+              <div
+                class="con-container my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab7')"
+              >
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder2.svg.svg"
+                  alt=""
+                />
+                <p>sports</p>
+              </div>
+              <div
+                class="con-container my-2 subtablinks"
+                onclick="openSubtab(event, 'SubTab8')"
+              >
+                <img
+                  class="diple"
+                  src="img/about-me-image/diple.svg.svg"
+                  alt=""
+                />
+                <img
+                  class="folder"
+                  src="img/about-me-image/folder3.svg.svg"
+                  alt=""
+                />
+                <p>favorite-games</p>
+              </div>
+            </div>
             <div class="section-content-title contact">
               <img src="img/about-me-image/arrow.svg.svg" alt="" />
               <p>contacts</p>
             </div>
-            <div class="content contact">
+            <div class="content contact d-block">
               <div class="con-container active my-2 h-100">
                 <div class="d-flex mb-2">
                   <img src="img/about-me-image/email.svg.svg" alt="" />
@@ -151,7 +257,7 @@
           <div class="wrapper">
             <div class="information">
               <div class="sec-title">
-                <p>professional-info</p>
+                <p id="sec-title-p2">professional-info</p>
               </div>
               <div class="wrapper">
                 <div id="lineCount" class="line-numbers">
@@ -159,15 +265,70 @@
                     <span class="counter">1</span>
                     <span class="dec">/**</span>
                   </div>
+                  <div class="cus-grid">
+                    <span class="counter">2</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">3</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">4</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">5</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">6</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">7</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">8</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">9</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">10</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">11</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">12</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">13</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">14</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">15</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">16</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">17</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">18</span><span class="dec">*</span>
+                  </div>
+                  <div class="cus-grid">
+                    <span class="counter">19</span><span class="dec">**/</span>
+                  </div>
                 </div>
-                <div class="text-content">
+                <!-- Sup Tab Content -->
+                <div id="SubTab1" class="text-content subtabcontent">
                   <p id="myText">
                     <br />
-                    Over the past 5 years, Lorem ipsum dolor sit amet,
+                    ex Over the past 1 years, Lorem ipsum dolor sit amet,
                     consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et do lore magna aliqua. Ut enim ad
                     minim veniam, qui past 5 years, Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod tempor
+                    consectetur a dipiscing elit, sed do eiusmod tempor
                     incididunt ut labore et do lore magna aliqua. Ut enim ad
                     minim veniam, quis no past 5 years, Lorem ipsum dolor sit
                     amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -179,6 +340,96 @@
                     nisi ut aliquip ex ea commodo consequat. Duis aute irure
                     dolor in reprehenderit in voluptate velit esse cillum dolore
                     eu fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab2" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    har As a front-end developer, Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab3" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    sof I bring more than Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab4" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    boio I bring more than Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab5" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    inte I bring more than Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab6" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    edu I bring more than Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab7" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    sppo I bring more than Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
+                  </p>
+                </div>
+                <div id="SubTab8" class="text-content subtabcontent">
+                  <p id="myText">
+                    <br />
+                    f GameI bring more than Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad
+                    minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur.
                   </p>
                 </div>
               </div>

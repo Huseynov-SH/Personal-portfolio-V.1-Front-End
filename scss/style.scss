@@ -390,6 +390,7 @@ html {
               }
             }
             .content {
+              display: none;
               .con-container {
                 height: 21px;
                 display: flex;
@@ -468,20 +469,10 @@ html {
                 border-bottom: 1px solid $border-color;
               }
               .wrapper {
-                overflow: auto;
+                overflow: hidden;
                 height: calc(100vh - 205px);
                 padding: 1.25rem;
                 border-right: 1px solid $border-color;
-                &::-webkit-scrollbar {
-                  width: 12px;
-                  border-left: 1px solid $border-color;
-                  border-bottom: 1px solid $border-color;
-                  background-color: $secondary-color;
-                }
-                &::-webkit-scrollbar-thumb {
-                  height: 30px;
-                  background-color: $color-grey;
-                }
                 .line-numbers {
                   width: 100px;
                   text-align: right;
@@ -506,7 +497,19 @@ html {
                   }
                 }
                 .text-content {
+                  overflow: auto;
+                  display: none;
                   width: 78%;
+                  &::-webkit-scrollbar {
+                    width: 12px;
+                    border-left: 1px solid $border-color;
+                    border-bottom: 1px solid $border-color;
+                    background-color: $secondary-color;
+                  }
+                  &::-webkit-scrollbar-thumb {
+                    height: 30px;
+                    background-color: $color-grey;
+                  }
                   p {
                     font-size: 14px;
                     color: $color-grey;
