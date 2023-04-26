@@ -51,3 +51,13 @@ function openSubtab(evt, subtabName) {
   document.getElementById(subtabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+
+//Code snippet showcase Details Toggle
+const clickableSpans = document.querySelectorAll(".snippet-card #details-sp");
+const hidePs = document.querySelectorAll(".snippet-card .hide-p");
+
+clickableSpans.forEach(function (clickableSpan, index) {
+  clickableSpan.addEventListener("click", function () {
+    hidePs[index].classList.toggle("show");
+  });
+});

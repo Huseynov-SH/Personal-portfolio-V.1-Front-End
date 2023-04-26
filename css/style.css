@@ -575,6 +575,9 @@ html body #main-section section#_about_me .page-content .wrapper .code-snippet-s
   border-top: 1px solid #1e2d3d;
   display: none;
 }
+html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card p.hide-p.show {
+  display: block;
+}
 html body #main-section footer {
   height: 40px;
   line-height: 40px;
@@ -686,6 +689,52 @@ html body #main-section footer .social-con a.social-github i {
   }
   html body section#main-section section#_hello .game {
     display: none;
+  }
+  html body section#main-section section#_about_me {
+    height: auto;
+  }
+  html body section#main-section section#_about_me .page-menu {
+    display: none !important;
+  }
+  html body section#main-section section#_about_me .page-content {
+    width: 100%;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information {
+    height: auto;
+    width: 100%;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information .sec-title {
+    display: none;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information .wrapper {
+    height: auto;
+    width: 100%;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information .wrapper p {
+    font-size: 16px !important;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information .wrapper .text-content {
+    width: 100%;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information .wrapper #lineCount {
+    display: none;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .code-snippet-showcase {
+    width: 100%;
+    height: auto;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .code-snippet-showcase .sec-title {
+    display: none;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper {
+    width: 100%;
+    height: auto;
   }
   html body section#main-section footer > div {
     justify-content: start !important;
