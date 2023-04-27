@@ -61,3 +61,12 @@ clickableSpans.forEach(function (clickableSpan, index) {
     hidePs[index].classList.toggle("show");
   });
 });
+
+var headers = document.getElementsByClassName("accordion-header");
+
+for (var i = 0; i < headers.length; i++) {
+  headers[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
+
