@@ -7,11 +7,17 @@ bars_label_icon.addEventListener("click", function () {
 
 // // About Me  Information Tabs
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementsByClassName("tablinks")[0].click();
+  let tabLinks = document.getElementsByClassName("tablinks")[0];
+  if (tabLinks != undefined) {
+    tabLinks.click();
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementsByClassName("subtablinks")[0].click();
+  let tabLinks2 = document.getElementsByClassName("subtablinks")[0];
+  if (tabLinks2 != undefined) {
+    tabLinks2.click();
+  }
 });
 
 function openTab(evt, tabName) {
@@ -70,3 +76,13 @@ for (let i = 0; i < headers.length; i++) {
     this.classList.toggle("active");
   });
 }
+
+//Contact me page Dropdown menu
+let activeItem1 = document.querySelector("#_contact_me .page-menu-title1");
+activeItem1.addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+let activeItem2 = document.querySelector("#_contact_me .page-menu-title2");
+activeItem2.addEventListener("click", function () {
+  this.classList.toggle("active");
+});

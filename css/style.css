@@ -602,6 +602,7 @@ html body #main-section section#_projects {
 }
 html body #main-section section#_projects .page-menu {
   height: 100%;
+  overflow: hidden;
   max-width: 275px !important;
   min-width: 275px !important;
   border-right: 1px solid #1e2d3d;
@@ -624,6 +625,360 @@ html body #main-section section#_projects .page-menu .page-menu-title p {
   margin: 0;
   color: #fff;
   font-size: 14px;
+}
+html body #main-section section#_projects .page-menu nav#filters {
+  height: 100%;
+  overflow: auto;
+  padding: 10px 25px;
+}
+html body #main-section section#_projects .page-menu nav#filters::-webkit-scrollbar {
+  width: 12px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_projects .page-menu nav#filters::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-menu nav#filters ul {
+  padding: 0;
+  list-style-type: none;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li input {
+  position: relative;
+  width: 14.8px;
+  height: 14px;
+  appearance: none;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  box-sizing: border-box;
+  border: 2px solid #607b96;
+  border-radius: 3px;
+  cursor: pointer;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li input:checked + img {
+  opacity: 1;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li input:checked + img + span {
+  color: #fff;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li input:checked::before {
+  top: -5px;
+  border-left: none;
+  border-top: none;
+  cursor: pointer;
+  width: 10px;
+  border-color: rgb(96, 123, 150);
+  transform: rotate(45deg) translate(5px, -2px);
+}
+html body #main-section section#_projects .page-menu nav#filters ul li img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0 1rem;
+  opacity: 0.4;
+}
+html body #main-section section#_projects .page-menu nav#filters ul li span {
+  font-size: 14px;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content {
+  overflow: hidden;
+  width: calc(100% - 245px);
+}
+html body #main-section section#_projects .page-content .page-content-title {
+  overflow: auto;
+  width: 100%;
+  display: flex;
+  max-height: 35px;
+  min-height: 35px;
+  border-right: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_projects .page-content .page-content-title P {
+  margin: 0;
+  width: max-content;
+  padding: 7px 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(96, 123, 150);
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_projects .page-content .page-content-title::-webkit-scrollbar-corner {
+  display: none;
+}
+html body #main-section section#_projects .page-content .page-content-title::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_projects .page-content .page-content-title::-webkit-scrollbar-thumb {
+  height: 5px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper {
+  overflow: auto;
+  padding: 30px 100px 40px;
+  height: calc(100vh - 205px);
+}
+html body #main-section section#_projects .page-content .wrapper::-webkit-scrollbar {
+  width: 12px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_projects .page-content .wrapper::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper #not_found {
+  display: none !important;
+  display: flex;
+  padding: 80px 0;
+  text-align: center;
+  flex-direction: column;
+}
+html body #main-section section#_projects .page-content .wrapper #not_found span:nth-child(1) {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: center;
+  padding-bottom: 0.75rem;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper #not_found span:nth-child(2) {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #fff;
+}
+html body #main-section section#_projects .page-content .wrapper #not_found span:nth-child(3) {
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper span.card-title h5 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #4d5bce;
+  display: inline-block;
+}
+html body #main-section section#_projects .page-content .wrapper span.card-title h6 {
+  font-size: 14px;
+  display: inline-block;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper .project-card {
+  border: 1px solid #1e2d3d;
+  border-radius: 15px;
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .window {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .window img {
+  width: 100%;
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .window .icons {
+  top: 0.75rem;
+  right: 0.75rem;
+  position: absolute;
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .window .icons img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .card-info {
+  background-color: #011221;
+  padding: 1.5rem 1.5rem 2rem;
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .card-info p {
+  font-size: 14px;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper .project-card .card-info a {
+  background-color: #1c2b3a;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 7px;
+}
+html body #main-section section#_contact_me {
+  display: flex;
+  height: calc(100% - 85px);
+}
+html body #main-section section#_contact_me .page-menu {
+  height: 100%;
+  overflow: hidden;
+  max-width: 275px !important;
+  min-width: 275px !important;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_contact_me .page-menu .page-menu-title1,
+html body #main-section section#_contact_me .page-menu .page-menu-title2 {
+  cursor: pointer;
+  height: 35px;
+  display: flex;
+  width: 100%;
+  padding: 0 17px;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_contact_me .page-menu .page-menu-title1 img,
+html body #main-section section#_contact_me .page-menu .page-menu-title2 img {
+  width: 7px;
+  margin: auto 10px;
+}
+html body #main-section section#_contact_me .page-menu .page-menu-title1 p,
+html body #main-section section#_contact_me .page-menu .page-menu-title2 p {
+  line-height: 34px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+}
+html body #main-section section#_contact_me .page-menu .page-menu-title1.active img,
+html body #main-section section#_contact_me .page-menu .page-menu-title2.active img {
+  transform: rotate(90deg);
+}
+html body #main-section section#_contact_me .page-menu .page-menu-title1.active + div,
+html body #main-section section#_contact_me .page-menu .page-menu-title2.active + div {
+  display: block;
+}
+html body #main-section section#_contact_me .page-menu .contacts-info {
+  display: none;
+}
+html body #main-section section#_contact_me .page-menu .contacts-info img {
+  width: 17px;
+  margin: 0 5px 0 10px;
+}
+html body #main-section section#_contact_me .page-menu .contacts-info a {
+  color: rgb(96, 123, 150);
+  text-decoration: none;
+  font-size: 14px;
+}
+html body #main-section section#_contact_me .page-content {
+  width: 100%;
+}
+html body #main-section section#_contact_me .page-content .page-content-title {
+  width: 100%;
+  display: flex;
+  max-height: 35px;
+  min-height: 35px;
+  border-right: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_contact_me .page-content .page-content-title P {
+  margin: 0;
+  width: max-content;
+  padding: 7px 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(96, 123, 150);
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_contact_me .page-content .wrapper {
+  display: flex;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side {
+  width: 50%;
+  padding: 50px 25px 0;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-height: 400px;
+  max-width: 320px;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form label {
+  color: rgb(96, 123, 150);
+  font-size: 14px;
+  margin-bottom: 0.75rem;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form input,
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 13px;
+  background-color: #011221;
+  border: 2px solid #1e2d3d;
+  border-radius: 7px;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form input:focus,
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form textarea:focus {
+  border: 2px solid #607b96;
+  box-shadow: 0 0 0 2px rgba(96, 123, 150, 0.4117647059);
+  outline: none;
+  transition: none;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form input::-webkit-scrollbar,
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form textarea::-webkit-scrollbar {
+  width: 12px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form input::-webkit-scrollbar-thumb,
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form textarea::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form input::-webkit-scrollbar-corner,
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form textarea::-webkit-scrollbar-corner {
+  display: none;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side {
+  width: 50%;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary {
+  display: flex;
+  font-size: 15px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 75px 50px 0 75px;
+  width: 100%;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .line-numbers {
+  width: 1.5rem;
+  text-align: right;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .line-numbers span {
+  display: block;
+  color: rgb(96, 123, 150);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container {
+  padding-left: 40px;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.tag {
+  color: #c98bdf;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.tag-name {
+  color: #5565e8;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.operator {
+  color: #fff;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.text-codeline-link {
+  color: #e99287;
 }
 html body #main-section footer {
   height: 40px;

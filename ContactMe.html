@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Game snake CSS -->
+    <link rel="stylesheet" href="css/snake.css" />
+    <!-- My main CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- main section -start -->
+    <section id="main-section">
+      <!-- mobile navbar -start -->
+      <header class="mobile-navbar">
+        <nav>
+          <div class="d-flex justify-content-between">
+            <div class="col-10">
+              <a class="nav-logo" href="">sadiq-huseynov</a>
+            </div>
+            <div class="col-2 text-center">
+              <span class="menu-bars">
+                <label id="menu-bars-label" for="menu-bars"
+                  ><i class="fa-solid fa-bars"></i
+                ></label>
+              </span>
+            </div>
+          </div>
+          <input id="menu-bars" class="d-none" type="checkbox" />
+          <ul class="menu p-0 m-0">
+            <li><a class="active" href="">_hello</a></li>
+            <li><a class="" href="AboutMe.html">_about-me</a></li>
+            <li><a class="" href="Projects.html">_projects</a></li>
+            <li><a class="" href="ContactMe.html">_contact-me</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- mobile navbar -end -->
+      <!-- navbar -start -->
+      <header class="main-navbar">
+        <nav>
+          <div class="d-flex">
+            <a id="nav-logo" href="">sadiq-huseynov</a>
+            <a class="nav-link active" href="">_hello</a>
+            <a class="nav-link" href="AboutMe.html">_about-me</a>
+            <a class="nav-link" href="Projects.html">_projects</a>
+          </div>
+          <a class="nav-link nav-link-contact" href="ContactMe.html"
+            >_contact-me</a
+          >
+        </nav>
+      </header>
+      <!-- navbar -end -->
+      <!-- contact me section -start -->
+      <section id="_contact_me">
+        <div class="page-menu">
+          <div class="page-menu-title1 active">
+            <img src="img/about-me-image/arrow.svg.svg" alt="" />
+            <p>contacts</p>
+          </div>
+          <div class="content contacts-info">
+            <div class="con-container text-center active my-2 h-100">
+              <div class="mb-2">
+                <img src="img/about-me-image/phone.svg.svg" alt="" />
+                <a href="tel:+90123456789">+3598246359</a>
+              </div>
+              <div class="mb-2">
+                <img src="img/about-me-image/email.svg.svg" alt="" />
+                <a href="mailto:user@gmail.com"
+                  >sadiq.huseynovmaol01@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="page-menu-title2 active">
+            <img src="img/about-me-image/arrow.svg.svg" alt="" />
+            <p>find-me-also-in</p>
+          </div>
+          <div class="content contacts-info">
+            <div class="con-container text-center active my-2 h-100">
+              <img src="img/projects/link.svg.svg" alt="" />
+              <a href="">YouTube channel</a>
+            </div>
+            <div class="con-container text-center active my-2 h-100">
+              <img src="img/projects/link.svg.svg" alt="" />
+              <a href="">YouTube channel</a>
+            </div>
+            <div class="con-container text-center active my-2 h-100">
+              <img src="img/projects/link.svg.svg" alt="" />
+              <a href="">YouTube channel</a>
+            </div>
+            <div class="con-container text-center active my-2 h-100">
+              <img src="img/projects/link.svg.svg" alt="" />
+              <a href="">YouTube channel</a>
+            </div>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="page-content-title">
+            <p>contacts</p>
+          </div>
+          <div class="wrapper">
+            <div class="content left-side">
+              <form id="contact-form" action="">
+                <label for="nameInput">_name: </label>
+                <input id="nameInput" type="text" />
+                <label for="emailInput">_email: </label>
+                <input id="emailInput" type="email" />
+                <label for="messageInput">_message: </label>
+                <textarea
+                  name="message"
+                  id="messageInput"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </form>
+            </div>
+            <div class="content right-side">
+              <div class="form-summary">
+                <div class="line-numbers">
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                  <span>4</span>
+                  <span>5</span>
+                  <span>6</span>
+                  <span>7</span>
+                  <span>8</span>
+                  <span>9</span>
+                  <span>10</span>
+                  <span>11</span>
+                  <span>12</span>
+                  <span>13</span>
+                  <span>14</span>
+                  <span>15</span>
+                </div>
+                <div class="code-container">
+                  <p>
+                    <span class="tag"> const </span
+                    ><span class="tag-name"> button </span>
+                    <span class="operator">=</span>
+                    <span class="tag-name">
+                      document.querySelector
+                      <span class="text-menu-text">
+                        (
+                        <span class="text-codeline-link"> '#sendBtn' </span> );
+                      </span></span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact me section -end -->
+      <!-- footer -start -->
+      <footer class="d-flex">
+        <div class="w-100 h-100 d-flex justify-content-between">
+          <div class="d-flex w-100 social-con">
+            <div class="social-icon">
+              <span class="social-title"> find me in: </span
+              ><!-- 
+
+               --><a href=""><i class="fa-brands fa-twitter"></i> </a
+              ><!-- 
+               --><a href=""> <i class="fa-brands fa-facebook-f"></i> </a
+              ><!-- 
+                
+               -->
+            </div>
+            <a class="social-github" href="#"
+              ><p class="hide d-inline-block m-0 p-0">@username</p>
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- footer -end -->
+    </section>
+    <!-- main section -end -->
+    <!-- Font Awesome  6.4.0-->
+    <script
+      src="https://kit.fontawesome.com/c658681ccb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstarp 5.3 JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Game snake js -->
+    <script src="js/snake.js"></script>
+    <!-- My main js -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
