@@ -436,6 +436,18 @@ html body #main-section section#_about_me .page-content .wrapper .information .s
   color: rgb(96, 123, 150);
   border-right: 1px solid #1e2d3d;
 }
+html body #main-section section#_about_me .page-content .wrapper .information .mobile-sec-title {
+  display: none;
+  align-items: flex-end;
+  padding: 25px 20px 0 25px;
+}
+html body #main-section section#_about_me .page-content .wrapper .information .mobile-sec-title h5 {
+  font-size: 15px;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+}
 html body #main-section section#_about_me .page-content .wrapper .information .wrapper {
   overflow: hidden;
   height: calc(100vh - 205px);
@@ -583,6 +595,35 @@ html body #main-section section#_about_me .page-content .wrapper .code-snippet-s
 }
 html body #main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper .snippet-card p.hide-p.show {
   display: block;
+}
+html body #main-section section#_projects {
+  display: flex;
+  height: calc(100% - 85px);
+}
+html body #main-section section#_projects .page-menu {
+  height: 100%;
+  max-width: 275px !important;
+  min-width: 275px !important;
+  border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_projects .page-menu .page-menu-title {
+  height: 35px;
+  display: flex;
+  width: 100%;
+  padding-left: 2px;
+  border-bottom: 1px solid #1e2d3d;
+}
+html body #main-section section#_projects .page-menu .page-menu-title img {
+  width: 7px;
+  margin: auto 10px;
+  transform: rotate(90deg);
+  transition: all 0.2s linear;
+}
+html body #main-section section#_projects .page-menu .page-menu-title p {
+  line-height: 34px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
 }
 html body #main-section footer {
   height: 40px;
@@ -821,6 +862,9 @@ html body #main-section footer .social-con a.social-github i {
   }
   html body section#main-section section#_about_me .page-content .wrapper .information .sec-title {
     display: none;
+  }
+  html body section#main-section section#_about_me .page-content .wrapper .information .mobile-sec-title {
+    display: block;
   }
   html body section#main-section section#_about_me .page-content .wrapper .information .wrapper {
     height: auto;

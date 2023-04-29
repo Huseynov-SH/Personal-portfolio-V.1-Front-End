@@ -474,6 +474,18 @@ html {
                 }
                 border-bottom: 1px solid $border-color;
               }
+              .mobile-sec-title {
+                display: none;
+                align-items: flex-end;
+                padding: 25px 20px 0 25px;
+                h5 {
+                  font-size: 15px;
+                  color: $color-code-operator;
+                  padding-left: 0.5rem;
+                  padding-right: 0.5rem;
+                  display: inline-block;
+                }
+              }
               .wrapper {
                 overflow: hidden;
                 height: calc(100vh - 205px);
@@ -630,6 +642,38 @@ html {
               }
             }
           }
+        }
+      }
+      //projects section
+      section#_projects {
+        display: flex;
+        height: calc(100% - 85px);
+        .page-menu {
+          height: 100%;
+          max-width: 275px !important;
+          min-width: 275px !important;
+          border-right: 1px solid #1e2d3d;
+          .page-menu-title {
+            height: 35px;
+            display: flex;
+            width: 100%;
+            padding-left: 2px;
+            border-bottom: 1px solid #1e2d3d;
+            img {
+              width: 7px;
+              margin: auto 10px;
+              transform: rotate(90deg);
+              transition: all 0.2s linear;
+            }
+            p {
+              line-height: 34px;
+              margin: 0;
+              color: #fff;
+              font-size: 14px;
+            }
+          }
+        }
+        .page-content {
         }
       }
       footer {
@@ -880,6 +924,9 @@ html {
                 .sec-title {
                   display: none;
                 }
+                .mobile-sec-title {
+                  display: block;
+                }
                 .wrapper {
                   height: auto;
                   width: 100%;
@@ -903,7 +950,7 @@ html {
                 .wrapper {
                   width: 100%;
                   height: auto;
-                  h4{
+                  h4 {
                     color: $color-code-operator;
                   }
                 }

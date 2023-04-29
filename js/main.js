@@ -15,17 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function openTab(evt, tabName) {
-  if (tabName == "Tab1") {
-    document.getElementById("sec-title-p1").innerText = "professional-info";
-    document.getElementById("sec-title-p2").innerText = "professional-info";
-  } else if (tabName == "Tab2") {
-    document.getElementById("sec-title-p1").innerText = "personal-info";
-    document.getElementById("sec-title-p2").innerText = "personal-info";
-  } else {
-    document.getElementById("sec-title-p1").innerText = "hobbies-info";
-    document.getElementById("sec-title-p2").innerText = "hobbies-info";
-  }
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -36,10 +26,17 @@ function openTab(evt, tabName) {
   }
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  // title modifier
+  let imgElement = document.querySelector(".tablinks.active");
+  let altText = imgElement.alt;
+  document.getElementById("sec-title-p1").innerText = altText;
+  document.getElementById("sec-title-p2").innerText = altText;
+  ent.querySelector(".mobile-sec-title h4").innerText = "//" + altText;
 }
 
 function openSubtab(evt, subtabName) {
-  var i, subtabcontent, subtablinks;
+  let i, subtabcontent, subtablinks;
   subtabcontent = document.getElementsByClassName("subtabcontent");
   for (i = 0; i < subtabcontent.length; i++) {
     subtabcontent[i].style.display = "none";
@@ -50,6 +47,10 @@ function openSubtab(evt, subtabName) {
   }
   document.getElementById(subtabName).style.display = "block";
   evt.currentTarget.className += " active";
+
+  // mobile title modifier
+  let subtabtext = document.querySelector(".subtablinks.active p").innerText;
+  document.querySelector(".mobile-sec-title h5").innerText = "//" + subtabtext;
 }
 
 //Code snippet showcase Details Toggle
@@ -62,11 +63,10 @@ clickableSpans.forEach(function (clickableSpan, index) {
   });
 });
 
-var headers = document.getElementsByClassName("accordion-header");
+let headers = document.getElementsByClassName("accordion-header");
 
-for (var i = 0; i < headers.length; i++) {
+for (let i = 0; i < headers.length; i++) {
   headers[i].addEventListener("click", function () {
     this.classList.toggle("active");
   });
 }
-
