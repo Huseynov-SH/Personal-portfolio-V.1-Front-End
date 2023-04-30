@@ -56,7 +56,7 @@
       <header class="main-navbar">
         <nav>
           <div class="d-flex">
-            <a id="nav-logo" href="">sadiq-huseynov</a>
+            <a id="nav-logo" href="index.html">sadiq-huseynov</a>
             <a class="nav-link" href="index.html">_hello</a>
             <a class="nav-link" href="AboutMe.html">_about-me</a>
             <a class="nav-link active" href="Projects.html">_projects</a>
@@ -69,9 +69,136 @@
       <!-- navbar -end -->
       <!-- projects section -start -->
       <section id="_projects">
+        <!-- modal start -->
+        <div
+          class="modal custom-modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div
+            class="modal-dialog custom-modal-dialog modal-dialog-centered modal-xl"
+          >
+            <div class="modal-content custom-modal-content">
+              <div class="modal-header custom-modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Project1 // _jsons
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body custom-modal-body">
+                <div class="row">
+                  <div class="col-12 col-lg-7 left-side">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                      <div class="carousel-indicators">
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="0"
+                          class="active"
+                          aria-current="true"
+                          aria-label="Slide 1"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="1"
+                          aria-label="Slide 2"
+                        ></button>
+                        <button
+                          type="button"
+                          data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide-to="2"
+                          aria-label="Slide 3"
+                        ></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="img/projects/ui-animations2.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="img/projects/ui-animations2.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="img/projects/ui-animations2.png"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-5 right-side">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex aspernatur suscipit nisi atque earum laborum eius,
+                      doloribus id eligendi voluptas totam iste? Sapiente,
+                      libero. Obcaecati sequi sit dolor, at voluptatum, quidem
+                      impedit numquam eveniet recusandae, neque voluptatibus
+                      voluptas itaque aperiam possimus nostrum aspernatur sed
+                      facilis? A voluptatem, quis hic magnam officia sunt
+                      eveniet voluptates vero sit laborum minima minus assumenda
+                      quasi at laudantium? Quibusdam minima quasi enim nesciunt
+                      praesentium aliquam cum vitae accusantium, vero itaque
+                      voluptate possimus! Tempora laborum repudiandae dolor sunt
+                      temporibus inventore placeat aspernatur nostrum, quia at
+                      corrupti alias quos corporis ut consectetur sit
+                      voluptatibus soluta eos eaque quibusdam, debitis voluptas
+                      fugiat repellat odit. Adipisci odit repudiandae tenetur
+                      sed sint nesciunt quaerat saepe at cupiditate, modi
+                      praesentium. Necessitatibus?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer custom-modal-footer"></div>
+            </div>
+          </div>
+        </div>
+        <!-- modal end -->
         <div class="page-menu">
           <div id="mobile-page-title"><h4>_projects</h4></div>
-          <div class="page-menu-title active">
+          <div class="page-menu-title">
             <img src="img/about-me-image/arrow.svg.svg" alt="" />
             <p>technologies</p>
           </div>
@@ -79,7 +206,7 @@
             <ul>
               <li>
                 <input
-                  value="React"
+                  value="react"
                   class="project-filter-input"
                   type="checkbox"
                 />
@@ -88,53 +215,66 @@
               </li>
               <li>
                 <input
-                  value="javascript"
+                  value="html"
                   class="project-filter-input"
                   type="checkbox"
                 />
-                <img src="img/projects/React.svg.svg" alt="" />
-                <span>javascript</span>
+                <img src="img/projects/HTML.svg.svg" alt="" />
+                <span>HTML</span>
               </li>
               <li>
                 <input
-                  value="python"
+                  value="css"
                   class="project-filter-input"
                   type="checkbox"
                 />
-                <img src="img/projects/React.svg.svg" alt="" />
-                <span>python</span>
+                <img src="img/projects/CSS.svg.svg" alt="" />
+                <span>CSS</span>
               </li>
               <li>
                 <input
-                  value="java"
+                  value="vue"
                   class="project-filter-input"
                   type="checkbox"
                 />
-                <img src="img/projects/React.svg.svg" alt="" />
-                <span>java</span>
+                <img src="img/projects/Vue.svg.svg" alt="" />
+                <span>Vue</span>
               </li>
               <li>
                 <input
-                  value="csharp"
+                  value="angular"
                   class="project-filter-input"
                   type="checkbox"
                 />
-                <img src="img/projects/React.svg.svg" alt="" />
-                <span>csharp</span>
+                <img src="img/projects/Angular.svg.svg" alt="" />
+                <span>Angular</span>
               </li>
               <li>
                 <input
-                  value="React"
+                  value="gatsby"
                   class="project-filter-input"
                   type="checkbox"
                 />
-                <img src="img/projects/React.svg.svg" alt="" />
-                <span>React</span>
+                <img src="img/projects/Gatsby.svg.svg" alt="" />
+                <span>Gatsby</span>
               </li>
               <li>
-                <input class="project-filter-input" type="checkbox" />
-                <img src="img/projects/React.svg.svg" alt="" />
-                <span>React</span>
+                <input
+                  value="flutter"
+                  class="project-filter-input"
+                  type="checkbox"
+                />
+                <img src="img/projects/Flutter.svg.svg" alt="" />
+                <span>Flutter</span>
+              </li>
+              <li>
+                <input
+                  value="test"
+                  class="project-filter-input"
+                  type="checkbox"
+                />
+                <img src="img/projects/Flutter.svg.svg" alt="" />
+                <span>Test</span>
               </li>
             </ul>
           </nav>
@@ -152,12 +292,12 @@
             </div>
             <div class="row">
               <div
-                data-language="javascript"
+                data-language="react"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// _jsons</h6>
+                  <h5>Project1</h5>
+                  <h6>// _react</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
@@ -168,175 +308,258 @@
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="" class="hide">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="python"
+                data-language="html"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// _pyt</h6>
+                  <h5>Project1</h5>
+                  <h6>// html</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/HTML.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/ai-resources.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="" class="hide">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="python javascript"
+                data-language="css"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// _pyt and js</h6>
+                  <h5>Project1</h5>
+                  <h6>// _css</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/CSS.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/worldmap.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="java"
+                data-language="vue"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// _java</h6>
+                  <h5>Project1</h5>
+                  <h6>// _vue</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/Vue.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/ui-animations.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="" class="hide">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="csharp"
+                data-language="angular"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// _C#s</h6>
+                  <h5>Project1</h5>
+                  <h6>// _angular</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/Angular.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/tetris-game.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="javascript"
+                data-language="gatsby"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// JSs</h6>
+                  <h5>Project1</h5>
+                  <h6>// _gatsby</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/Gatsby.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/ethereum.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="python"
+                data-language="flutter"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// pyts</h6>
+                  <h5>Project1</h5>
+                  <h6>// _flutter</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/Flutter.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/worldmap.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="java"
+                data-language="html css"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// _Java</h6>
+                  <h5>Project1</h5>
+                  <h6>// _html and _css</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
-                      <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/HTML.svg.svg" alt="" />
+                      <img src="img/projects/CSS.svg.svg" alt="" />
                     </div>
                     <img src="img/projects/ui-animations2.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="" class="hide">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>
               <div
-                data-language="csharp React"
+                data-language="react angular"
                 class="project-ca-fil col-12 col-sm-6 col-xl-4 px-3 my-4"
               >
                 <span class="card-title">
-                  <h5>Project 1</h5>
-                  <h6>// C# and react</h6>
+                  <h5>Project1</h5>
+                  <h6>// _react and _angular</h6>
                 </span>
                 <div class="project-card">
                   <div class="window">
                     <div class="icons">
                       <img src="img/projects/React.svg.svg" alt="" />
+                      <img src="img/projects/Angular.svg.svg" alt="" />
                     </div>
-                    <img src="img/projects/ui-animations2.png" alt="" />
+                    <img src="img/projects/tetris-game.png" alt="" />
                   </div>
                   <div class="card-info">
                     <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <a href=""> view-project </a>
+                    <div class="button-container">
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        href=""
+                      >
+                        see details
+                      </a>
+                      <a href="">live preview</a>
+                    </div>
                   </div>
                 </div>
               </div>

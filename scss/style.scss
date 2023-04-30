@@ -654,6 +654,57 @@ html {
       section#_projects {
         display: flex;
         height: calc(100% - 85px);
+        .custom-modal {
+          .custom-modal-dialog {
+            .custom-modal-content {
+              background-color: $secondary-color;
+              .custom-modal-header {
+                color: $color-grey;
+                border-color: $border-color;
+                h1 {
+                  font-size: 20px !important;
+                }
+                button {
+                  background-color: $color-grey;
+                }
+              }
+              .custom-modal-body {
+                .left-side {
+                  margin-bottom: 20px;
+                }
+                .right-side {
+                  max-height: 60vh;
+                  overflow: auto;
+                  padding: 20px;
+                  text-align: center;
+                  &::-webkit-scrollbar {
+                    width: 12px;
+                    border-left: 1px solid $border-color;
+                    border-bottom: 1px solid $border-color;
+                    background-color: $secondary-color;
+                  }
+                  &::-webkit-scrollbar-thumb {
+                    height: 30px;
+                    background-color: $color-grey;
+                  }
+                  h5 {
+                    margin: 10px auto;
+                    color: $color-grey;
+                    font-size: 17px;
+                  }
+                  p {
+                    font-size: 15px;
+                    color: $color-grey;
+                  }
+                }
+              }
+              .custom-modal-footer {
+                color: $color-grey;
+                border-color: $border-color;
+              }
+            }
+          }
+        }
         .page-menu {
           height: 100%;
           overflow: hidden;
@@ -893,21 +944,31 @@ html {
               }
               .card-info {
                 background-color: #011221;
-                padding: 1.5rem 1.5rem 2rem;
+                padding: 5px;
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
                 p {
                   font-size: 14px;
+                  margin: 0;
                   color: $color-grey;
+                  padding: 1.5rem 1.5rem 1rem;
                 }
                 a {
                   background-color: #1c2b3a;
                   font-size: 0.75rem;
                   line-height: 1rem;
                   text-decoration: none;
-                  padding: 0.5rem 1rem;
+                  padding: 0.5rem 0.8rem;
                   color: $color-code-operator;
                   border-radius: 7px;
+                }
+                .button-container {
+                  display: flex;
+                  padding: 10px 6px;
+                  justify-content: space-between;
+                  a.hide {
+                    display: none;
+                  }
                 }
               }
             }
