@@ -38,7 +38,9 @@ function openTab(evt, tabName) {
   let altText = imgElement.alt;
   document.getElementById("sec-title-p1").innerText = altText;
   document.getElementById("sec-title-p2").innerText = altText;
-  ent.querySelector(".mobile-sec-title h4").innerText = "//" + altText;
+  if (document.querySelector(".mobile-sec-title h4") != null) {
+    this.innerText = "//" + altText;
+  }
 }
 
 function openSubtab(evt, subtabName) {
@@ -76,13 +78,110 @@ for (let i = 0; i < headers.length; i++) {
     this.classList.toggle("active");
   });
 }
+//Projects page Dropdown menu
+let menuTitle = document.querySelector("#_projects .page-menu-title");
+if (menuTitle != null) {
+  menuTitle.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
+
+// Projects page projects filter
+const checkboxes = document.querySelectorAll(".project-filter-input");
+const elements = document.querySelectorAll("[data-language]");
+const noProjects = document.getElementById("not_found");
+
+function filterElements() {
+  const checked = Array.from(checkboxes).filter((checkbox) => checkbox.checked);
+
+  if (!checked.length) {
+    elements.forEach((element) => {
+      element.style.display = "block";
+    });
+    noProjects.style.display = "none";
+    return;
+  }
+
+  let shouldShowProjects = false;
+
+  elements.forEach((element) => {
+    const languages = element.dataset.language.split(" ");
+    const shouldShow = languages.some((language) =>
+      checked.some((checkbox) => checkbox.value === language)
+    );
+    element.style.display = shouldShow ? "block" : "none";
+    if (shouldShow) {
+      shouldShowProjects = true;
+    }
+  });
+
+  if (!shouldShowProjects) {
+    noProjects.style.display = "block";
+  } else {
+    noProjects.style.display = "none";
+  }
+}
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", filterElements);
+});
+
+// filterElements();
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", filterElements);
+});
 
 //Contact me page Dropdown menu
 let activeItem1 = document.querySelector("#_contact_me .page-menu-title1");
-activeItem1.addEventListener("click", function () {
-  this.classList.toggle("active");
-});
+if (activeItem1 != null) {
+  activeItem1.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
 let activeItem2 = document.querySelector("#_contact_me .page-menu-title2");
-activeItem2.addEventListener("click", function () {
-  this.classList.toggle("active");
-});
+if (activeItem2 != null) {
+  activeItem2.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+}
+
+//Contat me page input reader
+// inputs
+const nameInput = document.getElementById("nameInput");
+const emailInput = document.getElementById("emailInput");
+const messageInput = document.getElementById("messageInput");
+//display
+const displayName = document.getElementById("name-value");
+const displaEmail = document.getElementById("email-value");
+const displayMessage = document.getElementById("message-value");
+const displayDate = document.getElementById("date-value");
+
+if (nameInput != null) {
+  nameInput.addEventListener("input", () => {
+    displayName.textContent = nameInput.value;
+  });
+}
+
+if (emailInput != null) {
+  emailInput.addEventListener("input", () => {
+    displaEmail.textContent = emailInput.value;
+  });
+}
+
+if (messageInput != null) {
+  messageInput.addEventListener("input", () => {
+    displayMessage.textContent = messageInput.value;
+  });
+}
+
+const myDate = new Date();
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+if (displayDate != null) {
+  displayDate.innerText = myDate.toLocaleDateString("en-US", options);
+}

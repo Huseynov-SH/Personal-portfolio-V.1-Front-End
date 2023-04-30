@@ -38,7 +38,7 @@ html body #main-section header.mobile-navbar nav span.menu-bars {
   color: rgb(96, 123, 150);
 }
 html body #main-section header.mobile-navbar nav span.menu-bars label {
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 html body #main-section header.mobile-navbar nav span.menu-bars label.active {
   transform: rotate(90deg);
@@ -52,16 +52,21 @@ html body #main-section header.mobile-navbar nav ul.menu {
   background-color: rgb(1, 22, 39);
 }
 html body #main-section header.mobile-navbar nav ul.menu li {
-  padding: 0 24px;
   list-style: none;
   border-bottom: 1px solid #1e2d3d;
 }
 html body #main-section header.mobile-navbar nav ul.menu li a {
+  width: 100%;
+  padding: 0 24px;
   color: rgb(96, 123, 150);
+  display: inline-block;
   text-decoration: none;
 }
 html body #main-section header.mobile-navbar nav ul.menu li a.active {
   color: #fff;
+}
+html body #main-section header.mobile-navbar nav ul.menu li a:focus {
+  background-color: rgb(1, 12, 21);
 }
 html body #main-section header.main-navbar nav {
   width: 100%;
@@ -183,6 +188,7 @@ html body #main-section section#_hello .hero .info p span.operator {
 html body #main-section section#_hello .hero .info p a.string {
   text-underline-offset: 4px;
   color: #e99287;
+  position: relative;
 }
 html body #main-section section#_hello .game .console {
   height: 370px;
@@ -315,7 +321,7 @@ html body #main-section section#_about_me .page-menu .section div.section-icon {
   display: flex;
   justify-content: center;
   padding-bottom: 24px;
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
   font-size: 20px;
 }
 html body #main-section section#_about_me .page-menu .section div.section-icon img {
@@ -343,7 +349,7 @@ html body #main-section section#_about_me .page-menu .section-content .section-c
   width: 7px;
   margin: auto 10px;
   transform: rotate(90deg);
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 html body #main-section section#_about_me .page-menu .section-content .section-content-title p {
   line-height: 34px;
@@ -607,7 +613,11 @@ html body #main-section section#_projects .page-menu {
   min-width: 275px !important;
   border-right: 1px solid #1e2d3d;
 }
+html body #main-section section#_projects .page-menu #mobile-page-title {
+  display: none;
+}
 html body #main-section section#_projects .page-menu .page-menu-title {
+  cursor: pointer;
   height: 35px;
   display: flex;
   width: 100%;
@@ -617,8 +627,7 @@ html body #main-section section#_projects .page-menu .page-menu-title {
 html body #main-section section#_projects .page-menu .page-menu-title img {
   width: 7px;
   margin: auto 10px;
-  transform: rotate(90deg);
-  transition: all 0.2s linear;
+  transition: all 0.1s linear;
 }
 html body #main-section section#_projects .page-menu .page-menu-title p {
   line-height: 34px;
@@ -626,7 +635,14 @@ html body #main-section section#_projects .page-menu .page-menu-title p {
   color: #fff;
   font-size: 14px;
 }
+html body #main-section section#_projects .page-menu .page-menu-title.active img {
+  transform: rotate(90deg);
+}
+html body #main-section section#_projects .page-menu .page-menu-title.active + nav#filters {
+  display: block;
+}
 html body #main-section section#_projects .page-menu nav#filters {
+  display: none;
   height: 100%;
   overflow: auto;
   padding: 10px 25px;
@@ -697,11 +713,27 @@ html body #main-section section#_projects .page-menu nav#filters ul li span {
   font-size: 14px;
   color: rgb(96, 123, 150);
 }
+html body #main-section section#_projects .page-menu .mobile-sec-title {
+  display: none;
+  align-items: flex-end;
+  padding: 25px 20px 0 25px;
+}
+html body #main-section section#_projects .page-menu .mobile-sec-title h5 {
+  font-size: 13px;
+  color: #fff;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+}
+html body #main-section section#_projects .page-menu .mobile-sec-title span {
+  font-size: 12px;
+  color: rgb(96, 123, 150);
+}
 html body #main-section section#_projects .page-content {
   overflow: hidden;
   width: calc(100% - 245px);
 }
-html body #main-section section#_projects .page-content .page-content-title {
+html body #main-section section#_projects .page-content .project-page-content-title {
   overflow: auto;
   width: 100%;
   display: flex;
@@ -710,7 +742,7 @@ html body #main-section section#_projects .page-content .page-content-title {
   border-right: 1px solid #1e2d3d;
   border-bottom: 1px solid #1e2d3d;
 }
-html body #main-section section#_projects .page-content .page-content-title P {
+html body #main-section section#_projects .page-content .project-page-content-title P {
   margin: 0;
   width: max-content;
   padding: 7px 20px;
@@ -719,17 +751,17 @@ html body #main-section section#_projects .page-content .page-content-title P {
   color: rgb(96, 123, 150);
   border-right: 1px solid #1e2d3d;
 }
-html body #main-section section#_projects .page-content .page-content-title::-webkit-scrollbar-corner {
+html body #main-section section#_projects .page-content .project-page-content-title::-webkit-scrollbar-corner {
   display: none;
 }
-html body #main-section section#_projects .page-content .page-content-title::-webkit-scrollbar {
+html body #main-section section#_projects .page-content .project-page-content-title::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   border-left: 1px solid #1e2d3d;
   border-bottom: 1px solid #1e2d3d;
   background-color: rgb(1, 22, 39);
 }
-html body #main-section section#_projects .page-content .page-content-title::-webkit-scrollbar-thumb {
+html body #main-section section#_projects .page-content .project-page-content-title::-webkit-scrollbar-thumb {
   height: 5px;
   background-color: rgb(96, 123, 150);
 }
@@ -749,11 +781,13 @@ html body #main-section section#_projects .page-content .wrapper::-webkit-scroll
   background-color: rgb(96, 123, 150);
 }
 html body #main-section section#_projects .page-content .wrapper #not_found {
-  display: none !important;
-  display: flex;
+  display: none;
   padding: 80px 0;
   text-align: center;
   flex-direction: column;
+}
+html body #main-section section#_projects .page-content .wrapper #not_found span {
+  display: block;
 }
 html body #main-section section#_projects .page-content .wrapper #not_found span:nth-child(1) {
   font-size: 2.25rem;
@@ -769,6 +803,9 @@ html body #main-section section#_projects .page-content .wrapper #not_found span
 }
 html body #main-section section#_projects .page-content .wrapper #not_found span:nth-child(3) {
   color: rgb(96, 123, 150);
+}
+html body #main-section section#_projects .page-content .wrapper #not_found.active {
+  display: block !important;
 }
 html body #main-section section#_projects .page-content .wrapper span.card-title h5 {
   font-size: 15px;
@@ -807,6 +844,8 @@ html body #main-section section#_projects .page-content .wrapper .project-card .
 html body #main-section section#_projects .page-content .wrapper .project-card .card-info {
   background-color: #011221;
   padding: 1.5rem 1.5rem 2rem;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 html body #main-section section#_projects .page-content .wrapper .project-card .card-info p {
   font-size: 14px;
@@ -828,9 +867,12 @@ html body #main-section section#_contact_me {
 html body #main-section section#_contact_me .page-menu {
   height: 100%;
   overflow: hidden;
-  max-width: 275px !important;
-  min-width: 275px !important;
+  max-width: 275px;
+  min-width: 275px;
   border-right: 1px solid #1e2d3d;
+}
+html body #main-section section#_contact_me .page-menu #mobile-page-title {
+  display: none;
 }
 html body #main-section section#_contact_me .page-menu .page-menu-title1,
 html body #main-section section#_contact_me .page-menu .page-menu-title2 {
@@ -873,6 +915,9 @@ html body #main-section section#_contact_me .page-menu .contacts-info a {
   text-decoration: none;
   font-size: 14px;
 }
+html body #main-section section#_contact_me .page-menu .contacts-info a:hover {
+  color: #fff;
+}
 html body #main-section section#_contact_me .page-content {
   width: 100%;
 }
@@ -894,6 +939,7 @@ html body #main-section section#_contact_me .page-content .page-content-title P 
   border-right: 1px solid #1e2d3d;
 }
 html body #main-section section#_contact_me .page-content .wrapper {
+  height: 95%;
   display: flex;
 }
 html body #main-section section#_contact_me .page-content .wrapper .content.left-side {
@@ -905,8 +951,9 @@ html body #main-section section#_contact_me .page-content .wrapper .content.left
   display: flex;
   margin: 0 auto;
   flex-direction: column;
-  max-height: 400px;
+  max-height: 90%;
   max-width: 320px;
+  overflow: auto;
 }
 html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form label {
   color: rgb(96, 123, 150);
@@ -946,6 +993,19 @@ html body #main-section section#_contact_me .page-content .wrapper .content.left
 html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form textarea::-webkit-scrollbar-corner {
   display: none;
 }
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form button#submit-button {
+  font-size: 12px;
+  margin-top: 20px;
+  width: 130px;
+  line-height: 1.25rem;
+  color: #fff;
+  border-radius: 7px;
+  text-transform: none;
+  background-color: #1e2d3d;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.left-side form#contact-form button#submit-button:hover {
+  background-color: #263b50;
+}
 html body #main-section section#_contact_me .page-content .wrapper .content.right-side {
   width: 50%;
 }
@@ -966,7 +1026,29 @@ html body #main-section section#_contact_me .page-content .wrapper .content.righ
   color: rgb(96, 123, 150);
 }
 html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container {
-  padding-left: 40px;
+  max-width: 500px;
+  padding-left: 50px;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: calc(100% - 30px);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-left: 1px solid #1e2d3d;
+  border-bottom: 1px solid #1e2d3d;
+  background-color: rgb(1, 22, 39);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container::-webkit-scrollbar-thumb {
+  height: 10px;
+  background-color: rgb(96, 123, 150);
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container::-webkit-scrollbar-corner {
+  display: none;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p {
+  margin: 0;
+  color: rgb(96, 123, 150);
 }
 html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.tag {
   color: #c98bdf;
@@ -977,8 +1059,16 @@ html body #main-section section#_contact_me .page-content .wrapper .content.righ
 html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.operator {
   color: #fff;
 }
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.text-menu-text {
+  color: rgb(96, 123, 150);
+}
 html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span.text-codeline-link {
   color: #e99287;
+}
+html body #main-section section#_contact_me .page-content .wrapper .content.right-side .form-summary .code-container p span {
+  padding-left: 0;
+  width: 100%;
+  word-wrap: break-word;
 }
 html body #main-section footer {
   height: 40px;
@@ -1247,6 +1337,89 @@ html body #main-section footer .social-con a.social-github i {
   }
   html body section#main-section section#_about_me .page-content .wrapper .code-snippet-showcase .wrapper h4 {
     color: #fff;
+  }
+  html body section#main-section section#_contact_me {
+    flex-direction: column;
+  }
+  html body section#main-section section#_contact_me .page-menu {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+  html body section#main-section section#_contact_me .page-menu #mobile-page-title {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 70px;
+    padding: 0 25px;
+  }
+  html body section#main-section section#_contact_me .page-menu #mobile-page-title h4 {
+    font-size: 16px;
+  }
+  html body section#main-section section#_contact_me .page-menu .page-menu-title1,
+  html body section#main-section section#_contact_me .page-menu .page-menu-title2 {
+    margin-bottom: 3px;
+    background-color: #1e2d3d;
+  }
+  html body section#main-section section#_contact_me .page-menu .contacts-info .mobile-text-left {
+    text-align: left !important;
+  }
+  html body section#main-section section#_contact_me .page-menu .contacts-info .mobile-text-left br {
+    display: none;
+  }
+  html body section#main-section section#_contact_me .page-content {
+    width: 100%;
+  }
+  html body section#main-section section#_contact_me .page-content .page-content-title {
+    display: none;
+  }
+  html body section#main-section section#_contact_me .page-content .wrapper .content.left-side {
+    width: 100%;
+  }
+  html body section#main-section section#_contact_me .page-content .wrapper .content.right-side {
+    display: none;
+  }
+  html body section#main-section section#_projects {
+    flex-direction: column;
+  }
+  html body section#main-section section#_projects .page-menu {
+    max-width: 100% !important;
+    min-width: 100% !important;
+  }
+  html body section#main-section section#_projects .page-menu #mobile-page-title {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 70px;
+    padding: 0 25px;
+  }
+  html body section#main-section section#_projects .page-menu #mobile-page-title h4 {
+    font-size: 16px;
+  }
+  html body section#main-section section#_projects .page-menu .page-menu-title {
+    margin-bottom: 3px;
+    padding-left: 10px;
+    background-color: #1e2d3d;
+  }
+  html body section#main-section section#_projects .page-menu .contacts-info .mobile-text-left {
+    text-align: left !important;
+  }
+  html body section#main-section section#_projects .page-menu .mobile-sec-title {
+    display: block;
+  }
+  html body section#main-section section#_projects .page-content {
+    width: 100%;
+  }
+  html body section#main-section section#_projects .page-content .project-page-content-title {
+    display: none;
+  }
+  html body section#main-section section#_projects .page-content .wrapper {
+    padding: 30px 20px 40px;
+  }
+  html body section#main-section section#_projects .page-content .wrapper .content.left-side {
+    width: 100%;
+  }
+  html body section#main-section section#_projects .page-content .wrapper .content.right-side {
+    display: none;
   }
   html body section#main-section footer > div {
     justify-content: start !important;

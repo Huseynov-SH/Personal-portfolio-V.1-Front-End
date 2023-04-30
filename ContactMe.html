@@ -44,10 +44,10 @@
           </div>
           <input id="menu-bars" class="d-none" type="checkbox" />
           <ul class="menu p-0 m-0">
-            <li><a class="active" href="">_hello</a></li>
+            <li><a class="" href="index.html">_hello</a></li>
             <li><a class="" href="AboutMe.html">_about-me</a></li>
             <li><a class="" href="Projects.html">_projects</a></li>
-            <li><a class="" href="ContactMe.html">_contact-me</a></li>
+            <li><a class="active" href="ContactMe.html">_contact-me</a></li>
           </ul>
         </nav>
       </header>
@@ -57,11 +57,11 @@
         <nav>
           <div class="d-flex">
             <a id="nav-logo" href="">sadiq-huseynov</a>
-            <a class="nav-link active" href="">_hello</a>
+            <a class="nav-link" href="index.html">_hello</a>
             <a class="nav-link" href="AboutMe.html">_about-me</a>
             <a class="nav-link" href="Projects.html">_projects</a>
           </div>
-          <a class="nav-link nav-link-contact" href="ContactMe.html"
+          <a class="nav-link nav-link-contact active" href="ContactMe.html"
             >_contact-me</a
           >
         </nav>
@@ -70,18 +70,21 @@
       <!-- contact me section -start -->
       <section id="_contact_me">
         <div class="page-menu">
+          <div id="mobile-page-title"><h4>_contact-me</h4></div>
           <div class="page-menu-title1 active">
             <img src="img/about-me-image/arrow.svg.svg" alt="" />
             <p>contacts</p>
           </div>
           <div class="content contacts-info">
             <div class="con-container text-center active my-2 h-100">
-              <div class="mb-2">
+              <div class="mb-2 mobile-text-left">
                 <img src="img/about-me-image/phone.svg.svg" alt="" />
+                <br />
                 <a href="tel:+90123456789">+3598246359</a>
               </div>
-              <div class="mb-2">
+              <div class="mb-2 mobile-text-left">
                 <img src="img/about-me-image/email.svg.svg" alt="" />
+                <br />
                 <a href="mailto:user@gmail.com"
                   >sadiq.huseynovmaol01@gmail.com</a
                 >
@@ -93,19 +96,27 @@
             <p>find-me-also-in</p>
           </div>
           <div class="content contacts-info">
-            <div class="con-container text-center active my-2 h-100">
+            <div
+              class="con-container text-center mobile-text-left active my-2 h-100"
+            >
               <img src="img/projects/link.svg.svg" alt="" />
               <a href="">YouTube channel</a>
             </div>
-            <div class="con-container text-center active my-2 h-100">
+            <div
+              class="con-container text-center mobile-text-left active my-2 h-100"
+            >
               <img src="img/projects/link.svg.svg" alt="" />
               <a href="">YouTube channel</a>
             </div>
-            <div class="con-container text-center active my-2 h-100">
+            <div
+              class="con-container text-center mobile-text-left active my-2 h-100"
+            >
               <img src="img/projects/link.svg.svg" alt="" />
               <a href="">YouTube channel</a>
             </div>
-            <div class="con-container text-center active my-2 h-100">
+            <div
+              class="con-container text-center mobile-text-left active my-2 h-100"
+            >
               <img src="img/projects/link.svg.svg" alt="" />
               <a href="">YouTube channel</a>
             </div>
@@ -129,6 +140,9 @@
                   cols="30"
                   rows="10"
                 ></textarea>
+                <button id="submit-button" class="btn" type="submit">
+                  submit-message
+                </button>
               </form>
             </div>
             <div class="content right-side">
@@ -159,8 +173,49 @@
                       document.querySelector
                       <span class="text-menu-text">
                         (
+                        <br />
                         <span class="text-codeline-link"> '#sendBtn' </span> );
                       </span></span
+                    >
+                  </p>
+                  <br />
+                  <p class="text-menu-text">
+                    <span class="tag"> const </span
+                    ><span class="tag-name"> message </span> = { <br />
+                    &nbsp;&nbsp;
+                    <span id="name" class="tag-name"> name </span> :
+                    <span class="text-codeline-link">"</span
+                    ><span id="name-value" class="text-codeline-link"></span
+                    ><span class="text-codeline-link">"</span> , <br />
+                    &nbsp;&nbsp;
+                    <span id="email" class="tag-name"> email </span> :
+                    <span class="text-codeline-link">"</span
+                    ><span id="email-value" class="text-codeline-link"></span
+                    ><span class="text-codeline-link">"</span> , <br />
+                    &nbsp;&nbsp;
+                    <span id="message" class="tag-name"> message </span> :
+                    <span class="text-codeline-link">"</span
+                    ><span id="message-value" class="text-codeline-link"></span
+                    ><span class="text-codeline-link">"</span> , <br />
+                    &nbsp;&nbsp; date:
+                    <span id="date-value" class="text-codeline-link"></span
+                    ><br />
+                    }
+                  </p>
+                  <br />
+                  <p>
+                    <span class="tag-name">
+                      button.addEventListener
+                      <span class="text-menu-text">
+                        ( <span class="text-codeline-link"> 'click' </span> ),
+                        () <span class="tag"> =&gt; </span> { <br
+                      /></span>
+                      &nbsp;&nbsp;form.send
+                      <span class="text-menu-text">(</span> message
+                      <span class="text-menu-text"
+                        >); <br />
+                        })</span
+                      ></span
                     >
                   </p>
                 </div>
@@ -206,8 +261,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <!-- Game snake js -->
-    <script src="js/snake.js"></script>
     <!-- My main js -->
     <script src="js/main.js"></script>
   </body>

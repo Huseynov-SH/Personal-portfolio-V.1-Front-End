@@ -49,7 +49,7 @@ html {
             font-size: 26px;
             color: $color-grey;
             label {
-              transition: all 0.2s linear;
+              transition: all 0.1s linear;
               &.active {
                 transform: rotate(90deg);
               }
@@ -63,14 +63,19 @@ html {
             position: relative;
             background-color: rgb(1, 22, 39);
             li {
-              padding: 0 24px;
               list-style: none;
               border-bottom: 1px solid $border-color;
               a {
+                width: 100%;
+                padding: 0 24px;
                 color: $color-grey;
+                display: inline-block;
                 text-decoration: none;
                 &.active {
                   color: $color-code-operator;
+                }
+                &:focus {
+                  background-color: $primary-color;
                 }
               }
             }
@@ -208,6 +213,7 @@ html {
               a.string {
                 text-underline-offset: 4px;
                 color: $color-code-string;
+                position: relative;
               }
             }
           }
@@ -350,7 +356,7 @@ html {
               display: flex;
               justify-content: center;
               padding-bottom: 24px;
-              transition: all 0.2s linear;
+              transition: all 0.1s linear;
               font-size: 20px;
               img {
                 opacity: 0.4;
@@ -377,7 +383,7 @@ html {
                 width: 7px;
                 margin: auto 10px;
                 transform: rotate(90deg);
-                transition: all 0.2s linear;
+                transition: all 0.1s linear;
               }
               p {
                 line-height: 34px;
@@ -654,7 +660,11 @@ html {
           max-width: 275px !important;
           min-width: 275px !important;
           border-right: 1px solid #1e2d3d;
+          #mobile-page-title {
+            display: none;
+          }
           .page-menu-title {
+            cursor: pointer;
             height: 35px;
             display: flex;
             width: 100%;
@@ -663,8 +673,7 @@ html {
             img {
               width: 7px;
               margin: auto 10px;
-              transform: rotate(90deg);
-              transition: all 0.2s linear;
+              transition: all 0.1s linear;
             }
             p {
               line-height: 34px;
@@ -672,8 +681,17 @@ html {
               color: #fff;
               font-size: 14px;
             }
+            &.active {
+              img {
+                transform: rotate(90deg);
+              }
+            }
+            &.active + nav#filters {
+              display: block;
+            }
           }
           nav#filters {
+            display: none;
             height: 100%;
             overflow: auto;
             padding: 10px 25px;
@@ -744,11 +762,27 @@ html {
               }
             }
           }
+          .mobile-sec-title {
+            display: none;
+            align-items: flex-end;
+            padding: 25px 20px 0 25px;
+            h5 {
+              font-size: 13px;
+              color: $color-code-operator;
+              padding-left: 0.5rem;
+              padding-right: 0.5rem;
+              display: inline-block;
+            }
+            span {
+              font-size: 12px;
+              color: $color-grey;
+            }
+          }
         }
         .page-content {
           overflow: hidden;
           width: calc(100% - 245px);
-          .page-content-title {
+          .project-page-content-title {
             overflow: auto;
             width: 100%;
             display: flex;
@@ -795,11 +829,13 @@ html {
               background-color: $color-grey;
             }
             #not_found {
-              display: none !important;
-              display: flex;
+              display: none;
               padding: 80px 0;
               text-align: center;
               flex-direction: column;
+              span {
+                display: block;
+              }
               span:nth-child(1) {
                 font-size: 2.25rem;
                 line-height: 2.5rem;
@@ -814,6 +850,9 @@ html {
               }
               span:nth-child(3) {
                 color: $color-grey;
+              }
+              &.active {
+                display: block !important;
               }
             }
             span.card-title {
@@ -855,6 +894,8 @@ html {
               .card-info {
                 background-color: #011221;
                 padding: 1.5rem 1.5rem 2rem;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
                 p {
                   font-size: 14px;
                   color: $color-grey;
@@ -880,9 +921,12 @@ html {
         .page-menu {
           height: 100%;
           overflow: hidden;
-          max-width: 275px !important;
-          min-width: 275px !important;
+          max-width: 275px;
+          min-width: 275px;
           border-right: 1px solid #1e2d3d;
+          #mobile-page-title {
+            display: none;
+          }
           .page-menu-title1,
           .page-menu-title2 {
             cursor: pointer;
@@ -920,6 +964,9 @@ html {
               color: rgb(96, 123, 150);
               text-decoration: none;
               font-size: 14px;
+              &:hover {
+                color: $color-code-operator;
+              }
             }
           }
         }
@@ -943,6 +990,7 @@ html {
             }
           }
           .wrapper {
+            height: 95%;
             display: flex;
             .content {
               &.left-side {
@@ -953,8 +1001,9 @@ html {
                   display: flex;
                   margin: 0 auto;
                   flex-direction: column;
-                  max-height: 400px;
+                  max-height: 90%;
                   max-width: 320px;
+                  overflow: auto;
                   label {
                     color: $color-grey;
                     font-size: 14px;
@@ -989,6 +1038,19 @@ html {
                       display: none;
                     }
                   }
+                  button#submit-button {
+                    font-size: 12px;
+                    margin-top: 20px;
+                    width: 130px;
+                    line-height: 1.25rem;
+                    color: $color-code-operator;
+                    border-radius: 7px;
+                    text-transform: none;
+                    background-color: #1e2d3d;
+                    &:hover {
+                      background-color: #263b50;
+                    }
+                  }
                 }
               }
               &.right-side {
@@ -1009,8 +1071,28 @@ html {
                     }
                   }
                   .code-container {
-                    padding-left: 40px;
+                    max-width: 500px;
+                    padding-left: 50px;
+                    overflow-y: auto;
+                    overflow-x: auto;
+                    height: calc(100% - 30px);
+                    &::-webkit-scrollbar {
+                      width: 10px;
+                      height: 10px;
+                      border-left: 1px solid $border-color;
+                      border-bottom: 1px solid $border-color;
+                      background-color: $secondary-color;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                      height: 10px;
+                      background-color: $color-grey;
+                    }
+                    &::-webkit-scrollbar-corner {
+                      display: none;
+                    }
                     p {
+                      margin: 0;
+                      color: $color-grey;
                       span.tag {
                         color: #c98bdf;
                       }
@@ -1021,11 +1103,17 @@ html {
                         color: $color-code-operator;
                       }
                       span.text-menu-text {
+                        color: $color-grey;
                       }
                       span.text-codeline-link {
                       }
                       span.text-codeline-link {
                         color: #e99287;
+                      }
+                      span {
+                        padding-left: 0;
+                        width: 100%;
+                        word-wrap: break-word;
                       }
                     }
                   }
@@ -1312,6 +1400,99 @@ html {
                   h4 {
                     color: $color-code-operator;
                   }
+                }
+              }
+            }
+          }
+        }
+        section#_contact_me {
+          flex-direction: column;
+          .page-menu {
+            max-width: 100% !important;
+            min-width: 100% !important;
+            #mobile-page-title {
+              align-items: center;
+              color: $color-code-operator;
+              display: flex;
+              height: 70px;
+              padding: 0 25px;
+              h4 {
+                font-size: 16px;
+              }
+            }
+            .page-menu-title1,
+            .page-menu-title2 {
+              margin-bottom: 3px;
+              background-color: #1e2d3d;
+            }
+            .contacts-info {
+              .mobile-text-left {
+                text-align: left !important;
+                br {
+                  display: none;
+                }
+              }
+            }
+          }
+          .page-content {
+            width: 100%;
+            .page-content-title {
+              display: none;
+            }
+            .wrapper {
+              .content {
+                &.left-side {
+                  width: 100%;
+                }
+                &.right-side {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        section#_projects {
+          flex-direction: column;
+          .page-menu {
+            max-width: 100% !important;
+            min-width: 100% !important;
+            #mobile-page-title {
+              align-items: center;
+              color: $color-code-operator;
+              display: flex;
+              height: 70px;
+              padding: 0 25px;
+              h4 {
+                font-size: 16px;
+              }
+            }
+            .page-menu-title {
+              margin-bottom: 3px;
+              padding-left: 10px;
+              background-color: #1e2d3d;
+            }
+            .contacts-info {
+              .mobile-text-left {
+                text-align: left !important;
+              }
+            }
+            .mobile-sec-title {
+              display: block;
+            }
+          }
+          .page-content {
+            width: 100%;
+            .project-page-content-title {
+              display: none;
+            }
+            .wrapper {
+              padding: 30px 20px 40px;
+              .content {
+                &.left-side {
+                  width: 100%;
+                }
+                &.right-side {
+                  display: none;
                 }
               }
             }
